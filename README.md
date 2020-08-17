@@ -14,34 +14,26 @@ This application allows users to track twilight timings, as well as sun and moon
 
 **Sample JSON:**
 ```json
-{
+ {
     "location": {
-        "ip": "1.1.1.1",
-        "country_code2": "AU",
-        "country_code3": "AUS",
-        "country_name": "Australia",
-        "state_prov": "Queensland",
-        "district": "South Brisbane",
-        "city": "Brisbane",
-        "zipcode": "4101",
-        "latitude": -27.47561,
-        "longitude": 153.01537
-    },
-    "date": "2020-08-14",
-    "sunrise": "06:18",
-    "sunset": "17:27",
-    "solar_noon": "11:52",
-    "day_length": "11:09",
-    "sun_altitude": 35.351661926074,
-    "sun_distance": 1.5151971737031785E8,
-    "sun_azimuth": 45.366261713013216,
-    "moonrise": "03:47",
-    "moonset": "13:27",
-    "moon_altitude": 35.93568843333211,
-    "moon_distance": 390887.3209477042,
-    "moon_azimuth": 339.15960912319025,
-    "moon_parallactic_angle": 124.76060868297662
-}
+        "location": fort collins
+        "latitude": 40.5508527
+        "longitude": -105.0668085
+},
+    "date": 2020-08-17
+    "sunrise": 06:15
+    "sunset": 19:54
+    "solar_noon": 13:02
+    "day_length": 13:39
+    "sun_altitude": 38.564230406901856
+    "sun_distance": 151463523.8002413
+    "sun_azimuth": 107.46201358564377
+    "moonrise": 05:27
+    "moon_altitude": 57.4740471133149
+    "moon_distance": 378313.78752453544
+    "moon_azimuth": 115.45202655579925
+    "moon_parallactic_angle": -51.57051344123978
+} 
 ```
 
 ## Wireframes
@@ -98,8 +90,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | HTML Set-up | H | 2hrs | 2hrs | 2hrs |
 | Search Bar Form | H | 2hrs | 2hrs | 2hrs |
 | Create Button/Event Listener | H | 1hr | 2hrs | 2hrs |
-| Axios Requests | H | 2hrs | 2hrs | 2hrs |
-| Append Data to DOM | H | 2hrs | 2.5hrs | 2.5hrs |
+| Axios Requests | H | 1hr | 2hrs | 2hrs |
+| Append Data to DOM | H | 3hrs | 2.5hrs | 2.5hrs |
 | Toggle Night/Day/Twilight Images | H | 2hrs | 2.5hrs | 2.5hrs |
 | Format Dates/Time with Moment JS | H | 2hrs | 3hrs | 3hrs |
 | CSS: Media-Query | H | 2hrs | 2hrs | 2hrs |
@@ -109,7 +101,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | Create Local Storage | H | 2hrs | 3hrs | 3hrs |
 | Debugging | H | 3hrs | 3hrs | 3hrs |
 | Post-MVP: Second API | H | 2hrs | 3hrs | 3hrs |
-| Total | H | 31hrs| -hrs | -hrs |
+| Total | H | 31hrs | -hrs | -hrs |
 
 ## Code Snippet
 
