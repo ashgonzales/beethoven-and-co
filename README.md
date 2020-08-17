@@ -114,4 +114,5 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ 
+8.17.20 5:30pm: Appended all data info to the DOM
