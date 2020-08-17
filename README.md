@@ -46,7 +46,9 @@ This application allows users to track twilight timings, as well as sun and moon
 
 ## Wireframes
 
-![Wireframe](https://wireframe.cc/vQNAqz)
+![Desktop Wireframe](https://res.cloudinary.com/ashgon/image/upload/v1597674909/Homepage_2_bltsjr.png)
+
+![Mobile Wireframe](https://res.cloudinary.com/ashgon/image/upload/v1597674710/Homepage_z5cozh.png)
 
 ### MVP/PostMVP
 
@@ -83,7 +85,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## Priority Matrix
 
-![Priority Matrix](https://imgur.com/C1qFZks)
+![Priority Matrix](https://res.cloudinary.com/ashgon/image/upload/v1597674663/Priority_Matrix_fyui53.jpg)
 
 ## Timeframes
 
