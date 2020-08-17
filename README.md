@@ -8,10 +8,10 @@ Lovingly made for fellow explorers. Whether one is planning a day-long hike or o
 
 ## API and Data Sample
 
-IPGeolocation: 
-Unsplash
+**IPGeolocation:** Astronomical data for a given location
+**Unsplash:** Images for CSS
 
-Sample JSON:
+**Sample JSON:**
 ```json
 {
     "location": {
@@ -45,14 +45,13 @@ Sample JSON:
 
 ## Wireframes
 
-![Image of wireframe](https://wireframe.cc/vQNAqz)
+![alt text](https://wireframe.cc/vQNAqz "P1 Mobile Wireframe")
 
 ### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
 - Find suitable external apis 
 - Get data through axios call (IPGeolocation)
@@ -65,7 +64,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
     - Scroll bar wire-frame (mobile)
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
 - Add option to search via IP or address
 - Add second API (Wit.ai)
@@ -73,10 +71,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Scroll bar wire-frame (mobile)
 
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
 |---|---| ---|
@@ -89,19 +83,15 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Priority Matrix
 
-![Image of wireframe](https://imgur.com/C1qFZks)
+![alt text](https://imgur.com/C1qFZks "P1 Priority Matrix")
 
 ## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | HTML Set-up | H | 30min| 30min | 30min |
 | Form | H | 20min| 20min | 20min |
-| Get API Info | H | 3hrs| 2.5hrs | 2.5hrs |
+| Connect API | H | 3hrs| 2.5hrs | 2.5hrs |
 | CSS: Parallax Scroll | H | 2hr| 3hr | 3hr |
 | Total | H | 6hrs| 5hrs | 5hrs |
 
