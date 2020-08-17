@@ -4,7 +4,7 @@ Ad Ignotum
 
 ## Project Description
 
-Lovingly made for my fellow stargazers. This application allows users to track twilight timings, as well as sun and moon parameters for a given date and location for optimal stargazing events.  
+This application allows users to track twilight timings, as well as sun and moon parameters for a given date and location for optimal stargazing. Unsplash will be used 
 
 ## API and Data Sample
 
@@ -45,7 +45,7 @@ Lovingly made for my fellow stargazers. This application allows users to track t
 
 ## Wireframes
 
-![alt text](https://wireframe.cc/vQNAqz "P1 Mobile Wireframe")
+![Wireframe](https://wireframe.cc/vQNAqz)
 
 ### MVP/PostMVP
 
@@ -73,7 +73,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|August 14-16| Prompt / Wireframes / Priority Matrix / Timeframes / Design | Incomplete
+|August 14-16| Prompt / Wireframes / Priority Matrix / Timeframes / Design | Complete
 |August 17| Project Approval / HTML / JavaScript | Incomplete
 |August 18| CSS / Responsive Mobile & Desktop | Incomplete
 |August 19| Initial Clickable Model / MVP / Testing | Incomplete
@@ -82,23 +82,22 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## Priority Matrix
 
-![alt text](https://imgur.com/C1qFZks "P1 Priority Matrix")
-
 ![Priority Matrix](https://imgur.com/C1qFZks)
 
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML Set-up | H | 2hr | 2hrs | 2hrs |
+| HTML Set-up | H | 2hrs | 2hrs | 2hrs |
 | Form | H | 1hr | 1hr | 1hr |
 | Axios Requests | H | 1hr | 1hr | 1hr |
 | Append Data to DOM | H | 2hrs | 2.5hrs | 2.5hrs |
-| CSS: Media-Query | H | 1hr | 1.5hr | 1.5hr |
-| CSS: Flexbox | H | 2hr | 3hr | 3hr |
-| CSS: Parallax Scroll | H | 2hr | 3hr | 3hr |
-| Debugging | H | 2hr | 3hr | 3hr |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| CSS: Media-Query | H | 1.5hr | 1.5hr | 1.5hr |
+| CSS: Flexbox | H | 3hrs | 3hrs | 3hrs |
+| CSS: Parallax Scroll | H | 2hrs | 3hrs | 3hrs |
+| Debugging | H | 3hrs | 3hrs | 3hrs |
+| Post-MVP: Second API | H | 2hrs | 3hrs | 3hrs |
+| Total | H | 15hrs| -hrs | -hrs |
 
 ## Code Snippet
 
