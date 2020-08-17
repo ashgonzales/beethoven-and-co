@@ -100,7 +100,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | CSS: Parallax Scroll | H | 2hrs | 3hrs | 3hrs |
 | Debugging | H | 3hrs | 3hrs | 3hrs |
 | Post-MVP: Second API | H | 2hrs | 3hrs | 3hrs |
-| Total | H | 15hrs| -hrs | -hrs |
+| Total | H | 17.5hrs| -hrs | -hrs |
 
 ## Code Snippet
 
