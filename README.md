@@ -4,11 +4,12 @@ Ad Ignotum
 
 ## Project Description
 
-This application allows users to track twilight timings, as well as sun and moon parameters for a given date and location for optimal stargazing. Unsplash will be used 
+This application allows users to track twilight timings, as well as sun and moon parameters for a given date and location for optimal stargazing. By adding the location name (town, city), a user should be able to see sunrise, sunset, day length, and other moon information that could affect their stargazing experience. 
 
 ## API and Data Sample
 
 **IPGeolocation:** Astronomical data for a given location
+
 **Unsplash:** Images for CSS
 
 **Sample JSON:**
