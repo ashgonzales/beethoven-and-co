@@ -4,7 +4,7 @@ Ad Ignotum
 
 ## Project Description
 
-Lovingly made for fellow explorers. Whether one is planning a day-long hike or observing celestial objects at night, we find that there is an optimal time for most outdoor activities. This application allows users to track twilight timings, as well as sun and moon parameters for a given date and location.  
+Lovingly made for my fellow stargazers. This application allows users to track twilight timings, as well as sun and moon parameters for a given date and location for optimal stargazing events.  
 
 ## API and Data Sample
 
@@ -47,10 +47,6 @@ Lovingly made for fellow explorers. Whether one is planning a day-long hike or o
 
 ![alt text](https://wireframe.cc/vQNAqz "P1 Mobile Wireframe")
 
-<p>
-    <img src="https://wireframe.cc/vQNAqz" width="220"/>
-</p>
-
 ### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
@@ -60,19 +56,18 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Find suitable external apis 
 - Get data through axios call (IPGeolocation)
 - Get input value from city search bar
-- Access value
+- Access values
 - Render data with photos on page (axios call to unsplash)
 - CSS 
     - Classes for day, night, moon, sunrise, sunset
     - Media-query for responsive design
-    - Scroll bar wire-frame (mobile)
 
 #### PostMVP  
 
 - Add option to search via IP or address
 - Add second API (Wit.ai)
-- Voice command abilities
 - Scroll bar wire-frame (mobile)
+- Local Storage
 
 ## Project Schedule
 
@@ -89,18 +84,20 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ![alt text](https://imgur.com/C1qFZks "P1 Priority Matrix")
 
-<p>
-    <img src="https://imgur.com/C1qFZks" width="220"/>
-</p>
+![Priority Matrix](https://imgur.com/C1qFZks)
 
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML Set-up | H | 30min| 30min | 30min |
-| Form | H | 20min| 20min | 20min |
-| Connect API | H | 3hrs| 2.5hrs | 2.5hrs |
-| CSS: Parallax Scroll | H | 2hr| 3hr | 3hr |
+| HTML Set-up | H | 2hr | 2hrs | 2hrs |
+| Form | H | 1hr | 1hr | 1hr |
+| Axios Requests | H | 1hr | 1hr | 1hr |
+| Append Data to DOM | H | 2hrs | 2.5hrs | 2.5hrs |
+| CSS: Media-Query | H | 1hr | 1.5hr | 1.5hr |
+| CSS: Flexbox | H | 2hr | 3hr | 3hr |
+| CSS: Parallax Scroll | H | 2hr | 3hr | 3hr |
+| Debugging | H | 2hr | 3hr | 3hr |
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Code Snippet
