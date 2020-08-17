@@ -57,20 +57,23 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 
 - Find suitable external apis 
+- HTML layout
 - Get data through axios call (IPGeolocation)
-- Get input value from city search bar
-- Access values
-- Render data with photos on page (axios call to unsplash)
+- Create Button for search bar
+- Get input value from city search bar 
+- Render resulting data on page through the DOM
+- Format times and dates with Moment JS
+- Create toggle for switching between night/day/twilight 
 - CSS 
     - Classes for day, night, moon, sunrise, sunset
+    - Scroll bar wire-frame (mobile)
     - Media-query for responsive design
 
 #### PostMVP  
 
-- Add option to search via IP or address
-- Add second API (Wit.ai)
-- Scroll bar wire-frame (mobile)
-- Local Storage
+- CSS: parallax scroll
+- Menu Drop Down
+- Add second API (Maybe SkyWatch?)
 
 ## Project Schedule
 
@@ -91,13 +94,19 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
+| Wireframing | H | 1hr | 1hr | 1hr |
 | HTML Set-up | H | 2hrs | 2hrs | 2hrs |
-| Form | H | 1hr | 1hr | 1hr |
-| Axios Requests | H | 1hr | 1hr | 1hr |
+| Search Bar Form | H | 2hrs | 2hrs | 2hrs |
+| Create Button/Event Listener | H | 1hr | 2hrs | 2hrs |
+| Axios Requests | H | 2hrs | 2hrs | 2hrs |
 | Append Data to DOM | H | 2hrs | 2.5hrs | 2.5hrs |
-| CSS: Media-Query | H | 1.5hr | 1.5hr | 1.5hr |
+| Toggle Night/Day/Twilight Images | H | 2hrs | 2.5hrs | 2.5hrs |
+| Format Dates/Time with Moment JS | H | 2hrs | 3hrs | 3hrs |
+| CSS: Media-Query | H | 2hrs | 2hrs | 2hrs |
 | CSS: Flexbox | H | 3hrs | 3hrs | 3hrs |
-| CSS: Parallax Scroll | H | 2hrs | 3hrs | 3hrs |
+| CSS: Parallax Scroll | H | 3hrs | 3hrs | 3hrs |
+| CSS: Menu Drop Down | H | 2hrs | 2hrs | 2hrs |
+| Create Local Storage | H | 2hrs | 3hrs | 3hrs |
 | Debugging | H | 3hrs | 3hrs | 3hrs |
 | Post-MVP: Second API | H | 2hrs | 3hrs | 3hrs |
 | Total | H | 17.5hrs| -hrs | -hrs |
