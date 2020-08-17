@@ -1,42 +1,51 @@
 ## Project Name
 
-MaWS: The Martian Weather Service
+Ad Ignotum
 
 ## Project Description
 
-This application combines a natural language interface called Wit.ai and the Mars lander weather API, allowing the user to access weather measurements through voice commands. This concept was derived from my love of: science fiction, "The Sirens of Titan" by the inimitable Kurt Vonnegut, and everything astronomy. 
+Lovingly made for fellow explorers. Whether one is planning a day-long hike or observing celestial objects at night, we find that there is an optimal time for most outdoor activities. This application allows users to track twilight timings, as well as sun and moon parameters for a given date and location.  
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+IPGeolocation: 
+Unsplash
 
 Sample JSON:
 ```json
 {
-    "Search": [
-        {
-            "Title": "Crash",
-            "Year": "2004",
-            "imdbID": "tt0375679",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BOTk1OTA1MjIyNV5BMl5BanBnXkFtZTcwODQxMTkyMQ@@._V1_SX300.jpg"
-        },
-        {
-            "Title": "Crash",
-            "Year": "1996",
-            "imdbID": "tt0115964",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BZjlhMDBlNDQtMjZkZi00NzJmLWI4MTgtZDdkMzZmZDcyZGNmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-        },
-    ],
-    "totalResults": "354",
-    "Response": "True"
+    "location": {
+        "ip": "1.1.1.1",
+        "country_code2": "AU",
+        "country_code3": "AUS",
+        "country_name": "Australia",
+        "state_prov": "Queensland",
+        "district": "South Brisbane",
+        "city": "Brisbane",
+        "zipcode": "4101",
+        "latitude": -27.47561,
+        "longitude": 153.01537
+    },
+    "date": "2020-08-14",
+    "sunrise": "06:18",
+    "sunset": "17:27",
+    "solar_noon": "11:52",
+    "day_length": "11:09",
+    "sun_altitude": 35.351661926074,
+    "sun_distance": 1.5151971737031785E8,
+    "sun_azimuth": 45.366261713013216,
+    "moonrise": "03:47",
+    "moonset": "13:27",
+    "moon_altitude": 35.93568843333211,
+    "moon_distance": 390887.3209477042,
+    "moon_azimuth": 339.15960912319025,
+    "moon_parallactic_angle": 124.76060868297662
 }
 ```
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+![Image of wireframe](https://wireframe.cc/vQNAqz)
 
 ### MVP/PostMVP
 
@@ -45,15 +54,23 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Media-query for responsive design
+- Find suitable external apis 
+- Get data through axios call (IPGeolocation)
+- Get input value from city search bar
+- Access value
+- Render data with photos on page (axios call to unsplash)
+- CSS 
+    - Classes for day, night, moon, sunrise, sunset
+    - Media-query for responsive design
+    - Scroll bar wire-frame (mobile)
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
 
+- Add option to search via IP or address
 - Add second API (Wit.ai)
 - Voice command abilities
+- Scroll bar wire-frame (mobile)
 
 ## Project Schedule
 
@@ -63,16 +80,16 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|August 14-16| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|August 17| Project Approval | Incomplete
-|August 18| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|August 19| Initial Clickable Model  | Incomplete
-|August 20| MVP | Incomplete
+|August 14-16| Prompt / Wireframes / Priority Matrix / Timeframes / Design | Incomplete
+|August 17| Project Approval / HTML / JavaScript | Incomplete
+|August 18| CSS / Responsive Mobile & Desktop | Incomplete
+|August 19| Initial Clickable Model / MVP / Testing | Incomplete
+|August 20| Post-MVP / Additional Debugging | Incomplete
 |August 21| Presentations | Incomplete
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+![Image of wireframe](https://imgur.com/C1qFZks)
 
 ## Timeframes
 
@@ -82,8 +99,10 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| HTML Set-up | H | 30min| 30min | 30min |
+| Form | H | 20min| 20min | 20min |
+| Get API Info | H | 3hrs| 2.5hrs | 2.5hrs |
+| CSS: Parallax Scroll | H | 2hr| 3hr | 3hr |
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Code Snippet
