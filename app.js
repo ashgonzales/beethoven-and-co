@@ -7,18 +7,28 @@ const grabData = async (city) => {
   try {
     const response = await axios.get(url)
     const cityData = response.data
-    return cityData
+    // console.log(cityData)
+    postData(cityData)
   } catch (error) {
     console(`Error: ${error}`)
   }
 }
 
-function postData(dataList) {
-  dataList.forEach((property) => {
-    const div = document.createElement('div')
-    div.textContent = 
-    document.body.append('')
-  })
+function postData(data) {
+  for (const [key, value] of Object.entries(data)) {
+    const dateDiv = document.querySelector('#date')
+    const p = document.createElement('p')
+    p.textContent = `${key}: ${value}`
+    dateDiv.append(p)
+  }
+  // const dateDiv = document.querySelector('#date')
+  // const date = document.createElement('p')
+  // p.textContent = data.date
+  // div.append(p)
+  // const dayLength = document.createElement('p')
+  // p.textContent = data.day_length
+  // div.append(p)
+  // console.log(p)
 }
 
 const grabInput = () => {

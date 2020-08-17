@@ -5,16 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script def src="./app.js" defer ></script>
+  <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700&Open+Sans:300,400,600,700"
+    />
+  <link rel="stylesheet" href="./style.css" />
   <title>Ad Ignotum</title>
 </head>
 <body>
-  <h1>ad ignotum</h1>
-  <form id="search">
-    <label for="city">Town or City:</label>
-    <input id="city" type="text" required placeholder="Montreal"/>
-    <button type="button">Submit</button>
-  </form>	
+  <header>
+    <h1>ad ignotum</h1>
+  </header>
+  <main>
+    <form id="searchBar">
+      <label for="search">Search:</label>
+      <input id="city" type="text" required placeholder="Town or City"/>
+      <button type="button">Submit</button>
+    </form>	
+    <div id="date">
+      
+    </div>
+    <div id="sunrise-sunset">
 
+    </div>
+    <div id="moonrise-moonset">
 
+    </div>
+  </main>
 </body>
 </html>
