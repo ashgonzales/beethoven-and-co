@@ -115,4 +115,5 @@ function reverse(string) {
 
 ## Change Log
  
-8.17.20 5:30pm: Appended all data info to the DOM
+8.17.20 Appended all data info to the DOM
+8.18.20 Changed div structures when info appends to accommodate flex box

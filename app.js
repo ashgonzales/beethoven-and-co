@@ -39,7 +39,15 @@ function postData(data) {
     sunDiv.append(sunset)
   const solarNoon = document.createElement('p')
   solarNoon.textContent = `Solar Noon: ${data.solar_noon}`
-    sunDiv.append(solarNoon)
+  sunDiv.append(solarNoon)
+  
+  const moonDiv = document.querySelector('#moonrise-moonset')
+  const moonrise = document.createElement('p')
+  moonrise.textContent = `Moonrise: ${data.moonrise}`
+    moonDiv.append(moonrise)
+  const moonset = document.createElement('p')
+  moonset.textContent = `Moonset: ${data.moonset}`
+    moonDiv.append(moonset)
 }
 
 const grabInput = () => {
