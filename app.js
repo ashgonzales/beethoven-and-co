@@ -8,7 +8,7 @@ const grabData = async (city) => {
     console.log(cityData)
     postData(cityData)
   } catch (error) {
-    console(`Error: ${error}`)
+    console.log(`Error: ${error}`)
   }
 }
 
@@ -28,7 +28,18 @@ function postData(data) {
     nameDiv.append(date)
   const dayLength = document.createElement('p')
     dayLength.textContent = `Day Length: ${data.day_length}`
-    nameDiv.append(dayLength)
+  nameDiv.append(dayLength)
+  
+  const sunDiv = document.querySelector('#sunrise-sunset')
+  const sunrise = document.createElement('p')
+  sunrise.textContent = `Sunrise: ${data.sunrise}`
+    sunDiv.append(sunrise)
+  const sunset = document.createElement('p')
+  sunset.textContent = `Sunset: ${data.sunset}`
+    sunDiv.append(sunset)
+  const solarNoon = document.createElement('p')
+  solarNoon.textContent = `Solar Noon: ${data.solar_noon}`
+    sunDiv.append(solarNoon)
 }
 
 const grabInput = () => {
@@ -36,7 +47,7 @@ const grabInput = () => {
   grabData(input)
 }
 
-const button = document.querySelector("button");
+const button = document.querySelector('button')
 button.addEventListener('click', (e) => {
   e.preventDefault()
   grabInput()
