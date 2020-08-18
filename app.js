@@ -1,7 +1,5 @@
 // https://api.ipgeolocation.io/astronomy?apiKey=ee038a94cec645899bb99e71b6c99e8f
 
-const searchBar = document.querySelector('search')
-
 const grabData = async (city) => {
   const url = `https://api.ipgeolocation.io/astronomy?apiKey=ee038a94cec645899bb99e71b6c99e8f&location=${city}`
   try {
@@ -23,22 +21,22 @@ function postData(data) {
   // }
   const nameDiv = document.querySelector('#name-date-length')
   const location = document.createElement('p')
-  location.textContent = data.location.location
-  nameDiv.append(location)
+    location.textContent = `Location: ${data.location.location}`
+    nameDiv.append(location)
   const date = document.createElement('p')
-  date.textContent = data.date
-  nameDiv.append(date)
+    date.textContent = `Date: ${data.date}`
+    nameDiv.append(date)
   const dayLength = document.createElement('p')
-  dayLength.textContent = data.day_length
-  nameDiv.append(dayLength)
+    dayLength.textContent = `Day Length: ${data.day_length}`
+    nameDiv.append(dayLength)
 }
 
 const grabInput = () => {
-  const input = document.querySelector('#city').value
+  const input = document.querySelector('.city').value
   grabData(input)
 }
 
-const button = document.querySelector('button')
+const button = document.querySelector("button");
 button.addEventListener('click', (e) => {
   e.preventDefault()
   grabInput()
