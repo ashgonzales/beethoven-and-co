@@ -7,7 +7,7 @@ const grabData = async (city) => {
   try {
     const response = await axios.get(url)
     const cityData = response.data
-    // console.log(cityData)
+    console.log(cityData)
     postData(cityData)
   } catch (error) {
     console(`Error: ${error}`)
@@ -15,20 +15,22 @@ const grabData = async (city) => {
 }
 
 function postData(data) {
-  for (const [key, value] of Object.entries(data)) {
-    const dateDiv = document.querySelector('#date')
-    const p = document.createElement('p')
-    p.textContent = `${key}: ${value}`
-    dateDiv.append(p)
-  }
-  // const dateDiv = document.querySelector('#date')
-  // const date = document.createElement('p')
-  // p.textContent = data.date
-  // div.append(p)
-  // const dayLength = document.createElement('p')
-  // p.textContent = data.day_length
-  // div.append(p)
-  // console.log(p)
+  // for (const [key, value] of Object.entries(data)) {
+  //   const dateDiv = document.querySelector('#date')
+  //   const p = document.createElement('p')
+  //   p.textContent = `${key}: ${value}`
+  //   dateDiv.append(p)
+  // }
+  const nameDiv = document.querySelector('#name-date-length')
+  const location = document.createElement('p')
+  location.textContent = data.location.location
+  nameDiv.append(location)
+  const date = document.createElement('p')
+  date.textContent = data.date
+  nameDiv.append(date)
+  const dayLength = document.createElement('p')
+  dayLength.textContent = data.day_length
+  nameDiv.append(dayLength)
 }
 
 const grabInput = () => {
