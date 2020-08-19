@@ -35,10 +35,12 @@ function postData(composers) {
 
     const overlay = document.createElement('div')
     overlay.classList.add('overlay')
+    overlay.classList.add('overlay-bottom')
     div.append(overlay)
 
     const text = document.createElement('div')
     text.classList.add('text')
+    text.textContent = 'Bottom'
     overlay.append(text)
   }
 }
