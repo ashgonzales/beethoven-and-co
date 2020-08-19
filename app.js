@@ -1,62 +1,42 @@
-// https://api.ipgeolocation.io/astronomy?apiKey=ee038a94cec645899bb99e71b6c99e8f
+// https://api.openopus.org/composer/list/rec.json
 
-const grabData = async (city) => {
-  const url = `https://api.ipgeolocation.io/astronomy?apiKey=ee038a94cec645899bb99e71b6c99e8f&location=${city}`
+// This snippet taken from https://masonry.desandro.com
+const grid = document.querySelector('.grid');
+
+const msnry = new Masonry( grid, {
+  itemSelector: '.grid-item',
+  columnWidth: '.grid-sizer',
+  percentPosition: true
+});
+
+// Original code starts here
+const grabData = async () => {
+  // const url = `https://api.ipgeolocation.io/astronomy?apiKey=ee038a94cec645899bb99e71b6c99e8f&location=${city}`
+  const url = 'https://api.openopus.org/composer/list/rec.json'
   try {
     const response = await axios.get(url)
-    const cityData = response.data
-    console.log(cityData)
-    postData(cityData)
+    const list = response.data.composers
+    console.log(list)
+    postData(list)
   } catch (error) {
     console.log(`Error: ${error}`)
   }
 }
 
-function postData(data) {
-  // for (const [key, value] of Object.entries(data)) {
-  //   const dateDiv = document.querySelector('#date')
-  //   const p = document.createElement('p')
-  //   p.textContent = `${key}: ${value}`
-  //   dateDiv.append(p)
-  // }
-  const nameDiv = document.querySelector('#name-date-length')
-  const location = document.createElement('p')
-    location.textContent = `Location: ${data.location.location}`
-    nameDiv.append(location)
-  const date = document.createElement('p')
-    date.textContent = `Date: ${data.date}`
-    nameDiv.append(date)
-  const dayLength = document.createElement('p')
-    dayLength.textContent = `Day Length: ${data.day_length}`
-  nameDiv.append(dayLength)
-  
-  const sunDiv = document.querySelector('#sunrise-sunset')
-  const sunrise = document.createElement('p')
-  sunrise.textContent = `Sunrise: ${data.sunrise}`
-    sunDiv.append(sunrise)
-  const sunset = document.createElement('p')
-  sunset.textContent = `Sunset: ${data.sunset}`
-    sunDiv.append(sunset)
-  const solarNoon = document.createElement('p')
-  solarNoon.textContent = `Solar Noon: ${data.solar_noon}`
-  sunDiv.append(solarNoon)
-  
-  const moonDiv = document.querySelector('#moonrise-moonset')
-  const moonrise = document.createElement('p')
-  moonrise.textContent = `Moonrise: ${data.moonrise}`
-    moonDiv.append(moonrise)
-  const moonset = document.createElement('p')
-  moonset.textContent = `Moonset: ${data.moonset}`
-    moonDiv.append(moonset)
-}
-
-const grabInput = () => {
-  const input = document.querySelector('.city').value
-  grabData(input)
+function postData(composers) {
+  for (let i = 0; i < composers.length; i++) {
+    const grid = document.querySelector('.grid')
+    const div = document.createElement('div')
+    div.classList.add('grid-item')
+    grid.append(div)
+    const img = document.createElement('img')
+    img.src = composers[i].portrait
+    div.append(img)
+  }
 }
 
 const button = document.querySelector('button')
 button.addEventListener('click', (e) => {
   e.preventDefault()
-  grabInput()
+  grabData()
 })
