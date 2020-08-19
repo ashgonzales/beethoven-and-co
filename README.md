@@ -117,3 +117,4 @@ function reverse(string) {
  
 8.17.20 Appended all data info to the DOM
 8.18.20 Changed div structures when info appends to accommodate flex box
+8.19.20 Added masonry grid to layout

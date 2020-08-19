@@ -58,6 +58,8 @@ body { font-family: sans-serif; }
 }
 
 .grid-item img {
-  display: grid;
+  display: block;
   max-width: 100%;
+  border: 6px solid rgb(255, 217, 74);
+  margin: 5px 10px;
 }

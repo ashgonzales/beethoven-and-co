@@ -32,6 +32,14 @@ function postData(composers) {
     const img = document.createElement('img')
     img.src = composers[i].portrait
     div.append(img)
+
+    const overlay = document.createElement('div')
+    overlay.classList.add('overlay')
+    div.append(overlay)
+
+    const text = document.createElement('div')
+    text.classList.add('text')
+    overlay.append(text)
   }
 }
 
