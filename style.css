@@ -1,59 +1,141 @@
-header {
-  height: 500px;
-  background-image: url(https://i.imgur.com/gg7JkXJ.jpg);
+html {
+  font-size: 125%;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  background-color: #e8937b;
   background-size: cover;
+  color: #031129;
+  margin: 20px 20px;
+}
+
+header {
+  background-image: url(https://i.imgur.com/Kt2nuDl.jpg);
+  background-size: cover;
+  height: 20rem;
   text-align: center;
 }
 
 h1 {
-  font-family: 'Raleway';
-  color: #ffffff;
-  font-size: 80px;
-  padding: 100px 0 5px 0;
-  margin: 0 auto;
+  font-family: 'IM Fell DW Pica', serif;
+  font-size: 4rem;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  z-index: 1;
+}
+
+.hidden-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -14rem;
+  width: 12rem; 
+  background-color: #2f1c49;
+  transition: transform 0.3s ease-out;
+}
+
+.hidden-is-open .visible-container,
+.hidden-is-open .hidden-container {
+  transform: translateX(14rem);
+}
+
+.visible-container {
+  padding-top: 1rem;
+  /* padding-left: 2.5rem; */
+  max-width: 6rem;
+  transition: transform 0.3s ease-out;
 }
 
 button {
-  font-family: 'Raleway';
-  background-color: rgb(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 9px 15px;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  border: 2px solid #e8937b;
+  transition: #eeeeee 0.3s ease-out;
+  padding: 14px 14px;
+  border-radius: 0;
+  line-height: 1;
+  background-color: transparent;
+}
+
+button:hover,
+.hidden-is-open button {
+  background-color: #e8937b;
+  border-color: #031129;
+}
+
+.nav {
+  margin-top: 3rem;
+}
+
+.nav a {
+  display: block;
+  margin: 0;
+  padding: 0.5rem 3rem;
+  color: #faae7b;
   text-decoration: none;
 }
 
-* { box-sizing: border-box; }
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-body { font-family: sans-serif; }
+.nav a:hover {
+  background-color: #6c1a61;
+}
 
-* { box-sizing: border-box; }
+.nav a:hover,
+.nav a:active {
+  color: #faae7b;
+}
 
-/* force scrollbar */
-html { overflow-y: scroll; }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-body { font-family: sans-serif; }
+.dropdown-container {
+  display: none;
+  position: absolute;
+  background-color: #744867;
+  min-width: 187px;
+  z-index: 1;
+}
 
-/* ---- grid ---- */
+.dropdown-container a {
+  color: #000000;
+  padding: 4px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {
+  display:block;
+}
 
 .grid {
-  background: #DDD;
+  background: #dddddd;
   position: relative;
   max-width: 100%;
   display: block;
 }
 
-/* clear fix */
 .grid:after {
   content: '';
   display: block;
   clear: both;
-}
-
-/* ---- .grid-item ---- */
+} 
 
 .grid-sizer,
 .grid-item {
-  width: 33.333%;
+  width: 25%;
 }
 
 .grid-item {
@@ -63,35 +145,29 @@ body { font-family: sans-serif; }
 .grid-item img {
   display: block;
   width: 100%;
-  margin: 5px 10px;
+  padding: 5px 5px 5px 5px;
 }
 
-.overlay {
+.grid-item {
+  position: relative;
+  display: inline-block; /* Make the width of box same as image */
+
+}
+
+.grid-item .text {
   position: absolute;
-  transition: all .3s ease;
-  opacity: 0;
-  background-color: rgb(0, 0, 0)
-}
-
-.text {
-  color: rgb(255, 255, 255);
-  font-family: 'Raleway';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-}
-
-.overlay-bottom {
-  width: 100%;
-  height:0;
-  bottom: 0;
+  z-index: 999;
+  margin: 0 auto;
   left: 0;
-  background-color: #ffffff;
+  right: 0;
+  top: 60%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 60%; /* Set the width of the positioned div */
 }
 
-.grid:hover .overlay-bottom {
-  height: 100%;
-  border: 6px solid rgb(255, 217, 74);
-}
+.highlight {
+  background: url(https://i.imgur.com/VhQpY89.png);
+  background-repeat: no-repeat;
+  background-size: 100% 95%;
+  padding: 8px 0;
+  }

@@ -1,39 +1,44 @@
 ## Project Name
 
-Ad Ignotum
+Music, Maestro!
 
 ## Project Description
 
-This application allows users to track twilight timings, as well as sun and moon parameters for a given date and location for optimal stargazing. By adding the location name (town, city), a user should be able to see sunrise, sunset, day length, and other moon information that could affect their stargazing experience. 
+This informational application allows users search up different classical composers by name, period, or by their famous works. 
 
 ## API and Data Sample
 
-**IPGeolocation:** Astronomical data for a given location
-
-**Unsplash:** Images for CSS
+**Open Opus:** Open source database for classical composers and work.
 
 **Sample JSON:**
 ```json
- {
-    "location": {
-        "location": fort collins
-        "latitude": 40.5508527
-        "longitude": -105.0668085
-},
-    "date": 2020-08-17
-    "sunrise": 06:15
-    "sunset": 19:54
-    "solar_noon": 13:02
-    "day_length": 13:39
-    "sun_altitude": 38.564230406901856
-    "sun_distance": 151463523.8002413
-    "sun_azimuth": 107.46201358564377
-    "moonrise": 05:27
-    "moon_altitude": 57.4740471133149
-    "moon_distance": 378313.78752453544
-    "moon_azimuth": 115.45202655579925
-    "moon_parallactic_angle": -51.57051344123978
-} 
+{
+            "id": "50",
+            "name": "Des Prez",
+            "complete_name": "Josquin Des Prez",
+            "birth": "1450-01-01",
+            "death": "1521-01-01",
+            "epoch": "Renaissance",
+            "portrait": "https://assets.openopus.org/portraits/44171858-1568084878.jpg"
+        },
+        {
+            "id": "82",
+            "name": "Dufay",
+            "complete_name": "Guillaume Dufay",
+            "birth": "1400-01-01",
+            "death": "1474-01-01",
+            "epoch": "Medieval",
+            "portrait": "https://assets.openopus.org/portraits/40935386-1568084886.jpg"
+        },
+        {
+            "id": "189",
+            "name": "Dvořák",
+            "complete_name": "Antonín Dvořák",
+            "birth": "1841-01-01",
+            "death": "1904-01-01",
+            "epoch": "Romantic",
+            "portrait": "https://assets.openopus.org/portraits/32988185-1568084888.jpg"
+        }
 ```
 
 ## Wireframes
@@ -50,15 +55,15 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 - Find suitable external apis 
 - HTML layout
-- Get data through axios call (IPGeolocation)
-- Create Button for search bar
-- Get input value from city search bar 
+- Get data through axios call
+- Create Button for Search by Composer
+- Create Button for Search by Period
+- Create Button for Search by Works
+- Connect to APIs
 - Render resulting data on page through the DOM
-- Format times and dates with Moment JS
-- Create toggle for switching between night/day/twilight 
 - CSS 
-    - Classes for day, night, moon, sunrise, sunset
-    - Scroll bar wire-frame (mobile)
+    - Masonry grid
+    - Image Hover effect
     - Media-query for responsive design
 
 #### PostMVP  
@@ -88,14 +93,15 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | --- | :---: |  :---: | :---: | :---: |
 | Wireframing | H | 1hr | 1hr | 1hr |
 | HTML Set-up | H | 2hrs | 2hrs | 2hrs |
-| Search Bar Form | H | 2hrs | 2hrs | 2hrs |
-| Create Button/Event Listener | H | 1hr | 2hrs | 2hrs |
-| Axios Requests | H | 1hr | 2hrs | 2hrs |
-| Append Data to DOM | H | 3hrs | 2.5hrs | 2.5hrs |
-| Toggle Night/Day/Twilight Images | H | 2hrs | 2.5hrs | 2.5hrs |
-| Format Dates/Time with Moment JS | H | 2hrs | 3hrs | 3hrs |
+| Button for Composer Search | H | 2hrs | 2hrs | 2.5hrs |
+| Button for Period Search | H | 2hrs | 2hrs | 2.5hrs |
+| Button for Works Search | H | 2hrs | 2hrs | 2.5hrs |
+| Attach Buttons to APIs | H | 1hr | 3hrs | 3hrs |
+| Axios Requests | H | 1hr | 1hr | 1hr |
+| Append Images to DOM | H | 2hrs | 2hrs | 2hrs |
+| CSS: Image Hover Effect | H | 2hrs | 3hrs | 3hrs |
 | CSS: Media-Query | H | 2hrs | 2hrs | 2hrs |
-| CSS: Flexbox | H | 3hrs | 3hrs | 3hrs |
+| CSS: Masonry Grid | H | 3hrs | 4hrs | 4hrs |
 | CSS: Parallax Scroll | H | 3hrs | 3hrs | 3hrs |
 | CSS: Menu Drop Down | H | 2hrs | 2hrs | 2hrs |
 | Create Local Storage | H | 2hrs | 3hrs | 3hrs |
