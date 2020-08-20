@@ -3,6 +3,7 @@
 // VARIABLES
 const menubutton = document.querySelector('#menuButton')
 const composerButton = document.querySelector('#composerButton')
+const worksButton = document.querySelector('#worksButton')
 const period = document.querySelector('.period')
 const body = document.body
 const grid = document.querySelector('.grid')
@@ -14,28 +15,28 @@ const msnry = new Masonry( grid, {
   percentPosition: true
 });
 
-// STORES DATA ALPHABETICALLY BY NAME
+// GETS DATA ALPHABETICALLY BY NAME
 const grabDataByComp = async () => {
   const url = 'https://api.openopus.org/composer/list/rec.json'
   try {
     const response = await axios.get(url)
     const list = response.data.composers
     console.log(list)
-    postData(list)
+    postComposers(list)
 
   } catch (error) {
     console.log(`Error: ${error}`)
   }
 }
 
-// STORES DATA BY PERIOD
-const grabDataByPeriod = async () => {
-  const url = `https://api.openopus.org/composer/list/epoch/${period}.json`
+// GETS DATA BY WORKS
+const grabDataByWorks = async () => {
+  const url = 'https://api.openopus.org/dyn/work/random'
   try {
     const response = await axios.get(url)
-    const list = response.data.composers
+    const list = response.data.works
     console.log(list)
-    postData(list)
+    postRandomWorks(list)
 
   } catch (error) {
     console.log(`Error: ${error}`)
@@ -43,7 +44,7 @@ const grabDataByPeriod = async () => {
 }
 
 // Function that creates a div to hold image and an overlay effect
-function postData(composers) {
+function postComposers(composers) {
   for (let i = 0; i < composers.length; i++) {
     const gridItem = document.createElement('div')
     gridItem.classList.add('grid-item')
@@ -64,11 +65,21 @@ function postData(composers) {
   }
 }
 
-// function picOverlay(composers) {
-//   const h2 = document.createElement('h2')
-//   h2.classList.add('centered')
-//   gridItem.append(h2)
-// }
+function postRandomWorks(works) {
+  for (let i = 0; i < works.length; i++) {
+    const gridItem = document.createElement('div')
+    gridItem.classList.add('grid-item')
+    grid.append(gridItem)
+    
+    const title = document.createElement('h4')
+    textDiv.textContent = 
+    gridItem.append(textDiv)
+
+    const text = document.createElement('h3')
+    text.textContent = composers[i].name
+    textDiv.append(text)
+  }
+}
 
 
 composerButton.addEventListener('click', (e) => {
@@ -76,9 +87,9 @@ composerButton.addEventListener('click', (e) => {
   grabDataByComp()
 })
 
-composerButton.addEventListener('click', (e) => {
+worksButton.addEventListener('click', (e) => {
   e.preventDefault()
-  grabDataByComp()
+  grabDataByWorks()
 })
 
 

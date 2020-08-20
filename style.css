@@ -8,25 +8,34 @@ body {
   background-color: #e8937b;
   background-size: cover;
   color: #031129;
-  margin: 20px 20px;
+  margin: 1.5rem 1.5rem;
 }
 
 header {
   background-image: url(https://i.imgur.com/Kt2nuDl.jpg);
   background-size: cover;
-  height: 20rem;
+  height: 26rem;
   text-align: center;
+  margin-bottom: 1.5rem;
+  z-index: 1;
 }
 
 h1 {
   font-family: 'IM Fell DW Pica', serif;
-  font-size: 4rem;
-  margin-top: 6rem;
-  margin-bottom: 1rem;
+  /* color:	#192265; */
+  color: #e8937b;
+  font-size: 2rem;
+  margin-top: 9rem;
+  margin-left: -34rem;
+  transform: rotate(-27deg);
+  z-index: 2;
 }
 
 h3 {
-  z-index: 1;
+  font-family: 'Permanent Marker', cursive;
+  color: #cc8286;
+  transform: rotate(-10deg);
+  padding-bottom: 2.5rem;
 }
 
 .hidden-container {
@@ -37,6 +46,7 @@ h3 {
   width: 12rem; 
   background-color: #2f1c49;
   transition: transform 0.3s ease-out;
+  z-index: 3;
 }
 
 .hidden-is-open .visible-container,
@@ -55,18 +65,18 @@ button {
   color: inherit;
   font: inherit;
   letter-spacing: inherit;
-  border: 2px solid #e8937b;
   transition: #eeeeee 0.3s ease-out;
   padding: 14px 14px;
   border-radius: 0;
   line-height: 1;
-  background-color: transparent;
+  background-color: #e8937b;
+  border-color: #031129;
 }
 
 button:hover,
 .hidden-is-open button {
-  background-color: #e8937b;
-  border-color: #031129;
+  border: 2px solid #e8937b;
+  background-color: transparent;
 }
 
 .nav {
@@ -140,34 +150,31 @@ button:hover,
 
 .grid-item {
   float: left;
+  position: relative;
 }
 
 .grid-item img {
   display: block;
   width: 100%;
-  padding: 5px 5px 5px 5px;
-}
-
-.grid-item {
-  position: relative;
-  display: inline-block; /* Make the width of box same as image */
-
+  padding: 5px 5px;
+  margin-bottom: 25px;
 }
 
 .grid-item .text {
+  text-align: center;
   position: absolute;
   z-index: 999;
   margin: 0 auto;
   left: 0;
   right: 0;
-  top: 60%; /* Adjust this value to move the positioned div up and down */
-  text-align: center;
-  width: 60%; /* Set the width of the positioned div */
+  top: 74%; 
+  width: 80%; 
 }
 
 .highlight {
-  background: url(https://i.imgur.com/VhQpY89.png);
+  background: url(https://i.imgur.com/8W3WKiY.png);
   background-repeat: no-repeat;
-  background-size: 100% 95%;
-  padding: 8px 0;
+  background-size: 100% 80%;
+  padding: 2px 0;
+  margin-top: 30;
   }
