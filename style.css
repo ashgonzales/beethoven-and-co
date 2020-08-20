@@ -14,7 +14,7 @@ body {
 header {
   background-image: url(https://i.imgur.com/Kt2nuDl.jpg);
   background-size: cover;
-  height: 26rem;
+  height: 28rem;
   text-align: center;
   margin-bottom: 1.5rem;
   z-index: 1;
@@ -26,7 +26,7 @@ h1 {
   color: #e8937b;
   font-size: 2rem;
   margin-top: 9rem;
-  margin-left: -34rem;
+  margin-right: 33rem;
   transform: rotate(-27deg);
   z-index: 2;
 }
@@ -56,7 +56,6 @@ h3 {
 
 .visible-container {
   padding-top: 1rem;
-  /* padding-left: 2.5rem; */
   max-width: 6rem;
   transition: transform 0.3s ease-out;
 }
@@ -176,5 +175,4 @@ button:hover,
   background-repeat: no-repeat;
   background-size: 100% 80%;
   padding: 2px 0;
-  margin-top: 30;
   }
