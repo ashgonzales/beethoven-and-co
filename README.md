@@ -1,10 +1,10 @@
 ## Project Name
 
-Music, Maestro!
+Beethoven & Co
 
 ## Project Description
 
-This informational application allows users search up different classical composers by name, period, or by their famous works. 
+This informational application allows users search up different classical composers by name, as well as browse some famous works. 
 
 ## API and Data Sample
 
