@@ -4,11 +4,11 @@ Beethoven & Co
 
 ## Project Description
 
-This informational application allows users search up different classical composers by name, as well as browse some famous works. 
+This informational application allows users search up different classical composers by name, by time period, as well as browse some random works. 
 
 ## API and Data Sample
 
-**Open Opus:** Open source database for classical composers and work.
+**Open Opus:** Open source database for classical composers and work (https://openopus.org/)
 
 **Sample JSON:**
 ```json
@@ -44,8 +44,6 @@ This informational application allows users search up different classical compos
 ## Wireframes
 
 ![Desktop Wireframe](https://res.cloudinary.com/ashgon/image/upload/v1597674909/Homepage_2_bltsjr.png)
-
-![Mobile Wireframe](https://res.cloudinary.com/ashgon/image/upload/v1597674710/Homepage_z5cozh.png)
 
 ### MVP/PostMVP
 
@@ -93,21 +91,22 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | --- | :---: |  :---: | :---: | :---: |
 | Wireframing | H | 1hr | 1hr | 1hr |
 | HTML Set-up | H | 2hrs | 2hrs | 2hrs |
-| Button for Composer Search | H | 2hrs | 2hrs | 2hrs |
+| Button for Composer Search | H | 2hrs | 1hrs | 1hrs |
 | Button for Works Search | H | 2hrs | 2hrs | 2hrs |
+| Button for Period Search | H | 2hrs | 1hrs | 1hrs |
 | Attach Buttons to APIs | H | 1hr | 3hrs | 3hrs |
-| Axios Requests | H | 1hr | 2hr | 2hr |
+| Axios Requests | H | 1hr | 2hrs | 2hrs |
 | Append Images to DOM | H | 2hrs | 2hrs | 2hrs |
 | CSS: Media-Query | H | 2hrs | 2hrs | 2hrs |
 | CSS: Flexbox | H | 3hrs | 3hrs | 3hrs |
 | Post-MVP: Off-Canvas Menu | H | 2hrs | 2hrs | 2hrs |
-| Post-MVP: Second API | H | 2hrs | 3hrs | 3hrs |
+| Post-MVP: 2nd/3rd API | H | 2hrs | 3hrs | 3hrs |
 | Post-MVP: Image Decoration | H | 2hrs | 2hrs | 3hrs |
-| ~~Post-MVP: Parallax Scroll~~ | H | 3hrs | 3hrs | 3hrs |
-| ~~Post-MVP: Image Hover Effect~~ | H | 2hrs | 3hrs | 3hrs |
-| ~~Create Local Storage~~ | H | 2hrs | 3hrs | 3hrs |
+| ~~Post-MVP: Parallax Scroll~~ | H | 3hrs | 0hrs | 0hrs |
+| ~~Post-MVP: Image Hover Effect~~ | H | 2hrs | 0hrs | 3hrs |
+| ~~Create Local Storage~~ | H | 2hrs | 0hrs | 0hrs |
 | Debugging | H | 3hrs | 4hrs | 4hrs |
-| Total | H | 34hrs | 30hrs | -hrs |
+| Total | H | 34hrs | 30hrs | 30hrs |
 
 ## Code Snippet
 
@@ -143,3 +142,4 @@ function postComposers(composers) {
 8.19.20 Altered MVP requirement to include two more buttons, an off-canvas menu, and opted for flexbox instead of masonry grid.
 8.20.20 Did not include parallax scroll as it was not intuitive to the design.
 8.20.20 Added image decorations as part of Post-MVP
+8.21.20 Added a replacement API as second one was not working upon deployment (http error)

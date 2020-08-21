@@ -26,7 +26,7 @@ h1 {
   font-size: 4rem;
   line-height: 1.5rem;
   margin-top: 20.6rem;
-  margin-right: 130px;
+  margin-right: 40px;
   z-index: 2;
 }
 
@@ -201,6 +201,11 @@ button:hover,
 
 hr .solid {
   border-top: 3px solid #2a1e4c;
+}
+
+#credit {
+  text-decoration: none;
+  color: #000000;
 }
 
 /* snippet taken from https://codepen.io/andybarefoot/pen/VwZjVma  that increases scale of text and paint smear*/
