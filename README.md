@@ -93,22 +93,21 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | --- | :---: |  :---: | :---: | :---: |
 | Wireframing | H | 1hr | 1hr | 1hr |
 | HTML Set-up | H | 2hrs | 2hrs | 2hrs |
-| Button for Composer Search | H | 2hrs | 2hrs | 2.5hrs |
-| Button for Period Search | H | 2hrs | 2hrs | 2.5hrs |
-| Button for Works Search | H | 2hrs | 2hrs | 2.5hrs |
+| Button for Composer Search | H | 2hrs | 2hrs | 2hrs |
+| Button for Works Search | H | 2hrs | 2hrs | 2hrs |
 | Attach Buttons to APIs | H | 1hr | 3hrs | 3hrs |
 | Axios Requests | H | 1hr | 2hr | 2hr |
 | Append Images to DOM | H | 2hrs | 2hrs | 2hrs |
 | CSS: Media-Query | H | 2hrs | 2hrs | 2hrs |
-| CSS: Flexbox | H | 3hrs | 2hrs | 2hrs |
+| CSS: Flexbox | H | 3hrs | 3hrs | 3hrs |
 | Post-MVP: Off-Canvas Menu | H | 2hrs | 2hrs | 2hrs |
 | Post-MVP: Second API | H | 2hrs | 3hrs | 3hrs |
 | Post-MVP: Image Decoration | H | 2hrs | 2hrs | 3hrs |
-~~| Post-MVP: Parallax Scroll | H | 3hrs | 3hrs | 3hrs |~~
-~~| Post-MVP: Image Hover Effect | H | 2hrs | 3hrs | 3hrs |~~
-~~| Create Local Storage | H | 2hrs | 3hrs | 3hrs |~~
+| ~~Post-MVP: Parallax Scroll~~ | H | 3hrs | 3hrs | 3hrs |
+| ~~Post-MVP: Image Hover Effect~~ | H | 2hrs | 3hrs | 3hrs |
+| ~~Create Local Storage~~ | H | 2hrs | 3hrs | 3hrs |
 | Debugging | H | 3hrs | 4hrs | 4hrs |
-| Total | H | 34hrs | 31hrs | -hrs |
+| Total | H | 34hrs | 30hrs | -hrs |
 
 ## Code Snippet
 

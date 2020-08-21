@@ -51,7 +51,7 @@ function postComposers(composers) {
     gridItem.append(img)
     
     const textDiv = document.createElement('div')
-    textDiv.classList.add('text', 'highlight')
+    textDiv.classList.add('text', 'paint')
     gridItem.append(textDiv)
 
     const text = document.createElement('h3')
@@ -92,25 +92,6 @@ function removeAllChildNodes(parent) {
 function dropDown() {
   document.querySelector('.dropdown-container').classList.toggle('show')
 }
-
-// triggers dropdown menu to close when other part of window is clicked
-window.addEventListener('click', (e) => {
-  if (!e.target.matches('.periodButton')) {
-    const dropdown = document.getElementsByClassName('dropdown-container')
-    for (let i = 0; i < dropdown.length; i++) {
-      let dropDownIsOpen = dropdown[i]
-      if (dropDownIsOpen.classList.contains('show')) {
-        dropDownIsOpen.classList.remove('show')
-      }
-    }
-  }
-})
-
-// window.addEventListener('click', (e) => {
-//   if (!document.querySelector('.hidden-container').contains(e.target)) {
-//     body.classList.remove('hidden-is-open')
-//   } 
-// })
 
 // EVENT LISTENERS
 
