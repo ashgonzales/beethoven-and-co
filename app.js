@@ -1,21 +1,43 @@
 // VARIABLES LIST
 
+const body = document.body
+const grid = document.querySelector('.grid')
 const menubutton = document.querySelector('#menuButton')
 const composerButton = document.querySelector('#composerButton')
 const worksButton = document.querySelector('#worksButton')
 const period = document.querySelector('.period')
-const body = document.body
-const grid = document.querySelector('.grid')
+const medieval = document.querySelector('.medieval')
+const renaissance = document.querySelector('.renaissance')
+const baroque = document.querySelector('.baroque')
+const classical = document.querySelector('.classical')
+const earlyRomantic = document.querySelector('.early-romantic')
+const romantic = document.querySelector('.romantic')
+const lateRomantic = document.querySelector('.late-romantic')
+const twentieth = document.querySelector('.twentieth')
+const postWar = document.querySelector('.post-war')
+const twentyFirst = document.querySelector('.twenty-first')
 
 // FUNCTIONS LIST
 
-// gets data alphabetically by name
+// gets data list of recommended composers
 const grabDataByComp = async () => {
   const url = 'https://api.openopus.org/composer/list/rec.json'
   try {
     const response = await axios.get(url)
     const list = response.data.composers
-    console.log(list)
+    postComposers(list)
+
+  } catch (error) {
+    console.log(`Error: ${error}`)
+  }
+}
+
+
+const grabDataByPeriod = async (period) => {
+  const url = `https://api.openopus.org/composer/list/epoch/${period}.json`
+  try {
+    const response = await axios.get(url)
+    const list = response.data.composers
     postComposers(list)
 
   } catch (error) {
@@ -29,7 +51,6 @@ const grabDataByWorks = async () => {
   try {
     const response = await axios.get(url)
     const list = response.data.works
-    console.log(list)
     postRandomWorks(list)
 
   } catch (error) {
@@ -107,4 +128,54 @@ worksButton.addEventListener('click', (e) => {
 
 menubutton.addEventListener('click', (e) => {
   body.classList.toggle('hidden-is-open')
+})
+
+medieval.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('medieval')
+})
+
+renaissance.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('renaissance')
+})
+
+baroque.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('baroque')
+})
+
+classical.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('classical')
+})
+
+earlyRomantic.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('early romantic')
+})
+
+romantic.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('romantic')
+})
+
+lateRomantic.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('late romantic')
+})
+
+twentieth.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('20th century')
+})
+
+postWar.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('post-war')
+})
+
+twentyFirst.addEventListener('click', (e) => {
+  e.preventDefault()
+  grabDataByPeriod('21st century')
 })
