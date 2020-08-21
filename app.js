@@ -94,17 +94,17 @@ function dropDown() {
 }
 
 // triggers dropdown menu to close when other part of window is clicked
-window.onclick = function(e) {
+window.addEventListener('click', (e) => {
   if (!e.target.matches('.periodButton')) {
     const dropdown = document.getElementsByClassName('dropdown-container')
     for (let i = 0; i < dropdown.length; i++) {
-      let openDropdown = dropdown[i]
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show')
+      let dropDownIsOpen = dropdown[i]
+      if (dropDownIsOpen.classList.contains('show')) {
+        dropDownIsOpen.classList.remove('show')
       }
     }
   }
-} 
+})
 
 // window.addEventListener('click', (e) => {
 //   if (!document.querySelector('.hidden-container').contains(e.target)) {

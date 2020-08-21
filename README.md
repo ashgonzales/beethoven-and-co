@@ -62,15 +62,15 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Connect to APIs
 - Render resulting data on page through the DOM
 - CSS 
-    - Masonry grid
-    - Image Hover effect
+    - Flexbox
+    - Image decoration
     - Media-query for responsive design
 
 #### PostMVP  
 
 - CSS: parallax scroll
 - Menu Drop Down
-- Add second API (Maybe SkyWatch?)
+- Add second API 
 
 ## Project Schedule
 
@@ -97,30 +97,50 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | Button for Period Search | H | 2hrs | 2hrs | 2.5hrs |
 | Button for Works Search | H | 2hrs | 2hrs | 2.5hrs |
 | Attach Buttons to APIs | H | 1hr | 3hrs | 3hrs |
-| Axios Requests | H | 1hr | 1hr | 1hr |
+| Axios Requests | H | 1hr | 2hr | 2hr |
 | Append Images to DOM | H | 2hrs | 2hrs | 2hrs |
-| CSS: Image Hover Effect | H | 2hrs | 3hrs | 3hrs |
 | CSS: Media-Query | H | 2hrs | 2hrs | 2hrs |
-| CSS: Masonry Grid | H | 3hrs | 4hrs | 4hrs |
-| CSS: Parallax Scroll | H | 3hrs | 3hrs | 3hrs |
-| CSS: Menu Drop Down | H | 2hrs | 2hrs | 2hrs |
-| Create Local Storage | H | 2hrs | 3hrs | 3hrs |
-| Debugging | H | 3hrs | 3hrs | 3hrs |
+| CSS: Flexbox | H | 3hrs | 2hrs | 2hrs |
+| Post-MVP: Off-Canvas Menu | H | 2hrs | 2hrs | 2hrs |
 | Post-MVP: Second API | H | 2hrs | 3hrs | 3hrs |
-| Total | H | 31hrs | -hrs | -hrs |
+| Post-MVP: Image Decoration | H | 2hrs | 2hrs | 3hrs |
+~~| Post-MVP: Parallax Scroll | H | 3hrs | 3hrs | 3hrs |~~
+~~| Post-MVP: Image Hover Effect | H | 2hrs | 3hrs | 3hrs |~~
+~~| Create Local Storage | H | 2hrs | 3hrs | 3hrs |~~
+| Debugging | H | 3hrs | 4hrs | 4hrs |
+| Total | H | 34hrs | 31hrs | -hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+This is my function to append a div container of my image and overlaying text. I struggled with keeping track of the div layers so when I was able to overlay my images properly, I pretty ecstatic.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+function postComposers(composers) {
+  removeAllChildNodes(grid)
+  for (let i = 0; i < composers.length; i++) {
+    const gridItem = document.createElement('div')
+    gridItem.classList.add('grid-item')
+    grid.append(gridItem)
+
+    const img = document.createElement('img')
+    img.classList.add('grid')
+    img.src = composers[i].portrait
+    gridItem.append(img)
+    
+    const textDiv = document.createElement('div')
+    textDiv.classList.add('text', 'highlight')
+    gridItem.append(textDiv)
+
+    const text = document.createElement('h3')
+    text.textContent = composers[i].name
+    textDiv.append(text)
+  }
 }
 ```
 
 ## Change Log
  
-8.17.20 Appended all data info to the DOM
-8.18.20 Changed div structures when info appends to accommodate flex box
-8.19.20 Added masonry grid to layout
+8.19.20 Changed API due to inadequate information that could be appended to the DOM. 
+8.19.20 Altered MVP requirement to include two more buttons, an off-canvas menu, and opted for flexbox instead of masonry grid.
+8.20.20 Did not include parallax scroll as it was not intuitive to the design.
+8.20.20 Added image decorations as part of Post-MVP
