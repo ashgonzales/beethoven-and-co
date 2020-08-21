@@ -1,19 +1,11 @@
-// https://api.openopus.org/composer/list/rec.json
+// VARIABLES LIST
 
-// VARIABLES
 const menubutton = document.querySelector('#menuButton')
 const composerButton = document.querySelector('#composerButton')
 const worksButton = document.querySelector('#worksButton')
 const period = document.querySelector('.period')
 const body = document.body
 const grid = document.querySelector('.grid')
-
-// MASONRY GRID SET-UP
-const msnry = new Masonry( grid, {
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer',
-  percentPosition: true
-});
 
 // FUNCTIONS LIST
 
@@ -47,6 +39,7 @@ const grabDataByWorks = async () => {
 
 // posts images and names of composers
 function postComposers(composers) {
+  removeAllChildNodes(grid)
   for (let i = 0; i < composers.length; i++) {
     const gridItem = document.createElement('div')
     gridItem.classList.add('grid-item')
@@ -69,6 +62,7 @@ function postComposers(composers) {
 
 // posts sets of randomly generated works
 function postRandomWorks(works) {
+  removeAllChildNodes(grid)
   for (let i = 0; i < works.length; i++) {
     const gridItem = document.createElement('div')
     gridItem.classList.add('grid-item')
@@ -76,6 +70,7 @@ function postRandomWorks(works) {
     
     const title = document.createElement('h4')
     title.textContent = `Title: ${works[i].title}`
+    gridItem.classList.add('title-effect')
     gridItem.append(title)
 
     const genre = document.createElement('p')
@@ -88,15 +83,20 @@ function postRandomWorks(works) {
   }
 }
 
+// clears grid before a new search
+function removeAllChildNodes(parent) {
+  grid.innerHTML = '';
+}
+
 // triggers the dropdown menu
 function dropDown() {
-  document.querySelector(".dropdown-container").classList.toggle("show")
+  document.querySelector('.dropdown-container').classList.toggle('show')
 }
 
 // triggers dropdown menu to close when other part of window is clicked
 window.onclick = function(e) {
   if (!e.target.matches('.periodButton')) {
-    const dropdown = document.getElementsByClassName("dropdown-container")
+    const dropdown = document.getElementsByClassName('dropdown-container')
     for (let i = 0; i < dropdown.length; i++) {
       let openDropdown = dropdown[i]
       if (openDropdown.classList.contains('show')) {
@@ -106,7 +106,14 @@ window.onclick = function(e) {
   }
 } 
 
+// window.addEventListener('click', (e) => {
+//   if (!document.querySelector('.hidden-container').contains(e.target)) {
+//     body.classList.remove('hidden-is-open')
+//   } 
+// })
+
 // EVENT LISTENERS
+
 composerButton.addEventListener('click', (e) => {
   e.preventDefault()
   grabDataByComp()
