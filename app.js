@@ -47,7 +47,7 @@ const grabDataByPeriod = async (period) => {
 
 // gets randomized set of classical works
 const grabDataByWorks = async () => {
-  const url = 'http://cors-anywhere.herokuapp.com/https://api.openopus.org/dyn/work/random'
+  const url = 'https://cors-anywhere.herokuapp.com/https://api.openopus.org/dyn/work/random'
   try {
     const response = await axios.get(url)
     const list = response.data.works
