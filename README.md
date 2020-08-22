@@ -1,6 +1,6 @@
 ## Project Name
 
-Beethoven & Co
+Beethoven & Co 
 
 ## Project Description
 
@@ -143,3 +143,7 @@ function postComposers(composers) {
 8.20.20 Did not include parallax scroll as it was not intuitive to the design.
 8.20.20 Added image decorations as part of Post-MVP
 8.21.20 Added a replacement API as second one was not working upon deployment (http error)
+
+## Github Page Link
+
+(https://ashgonzales.github.io/beethoven-and-co/)
