@@ -1,0 +1,23 @@
+{
+  "name": "beethoven-and-co",
+  "version": "1.0.0",
+  "description": "Beethoven & Co",
+  "main": "app.js",
+  "dependencies": {
+    "masonry-layout": "^4.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashgonzales/beethoven-and-co.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashgonzales/beethoven-and-co/issues"
+  },
+  "homepage": "https://github.com/ashgonzales/beethoven-and-co#readme"
+}
