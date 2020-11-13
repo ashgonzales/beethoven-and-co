@@ -26,14 +26,12 @@ header {
 }
 
 h1 {
-  font-family: 'Permanent Marker', sans-serif;
+  font-family: 'Pathway Gothic One', sans-serif;
   color: #ad7b84;
-  font-size: 4rem;
+  font-size: 7rem;
   line-height: 1.5rem;
-  margin-top: 28.2rem;
+  margin-top: 80vh;
   z-index: 2;
-  -webkit-text-stroke: 1px #282828;
-	text-shadow: 0px 4px 4px #282828;
 }
 
 h3 {
@@ -300,68 +298,109 @@ hr .solid {
 }
 
 /* Media-query for tablet and phone */
-@media only screen and (max-width: 600px) {
-  body {
-    background-color:	#ad7b84;
-    color: #000000;
-    margin: 0 auto;
+@media only screen and (max-width: 990px) {
+  h1 {
+    font-size: 7rem;
+    margin-top: 80vh;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  h1 {
+    font-size: 7rem;
+    margin-top: 80vh;
   }
 
+  .intro-container {
+    font-size: 20px;
+    margin-top: 260px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  h1 {
+    font-size: 6rem;
+    margin-top: 82vh;
+  }
+
+  .intro-container {
+    font-size: 20px;
+    margin-top: 260px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .intro-container {
+    font-size: 20px;
+    margin-top: 550px;
+    margin-bottom: 300px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   header {
     background-size: cover;
-    height: 26rem;
+    height: 100vh;
     text-align: center;
     margin-bottom: 1.5rem;
     z-index: 1;
   }
 
   h1 {
-    font-size: 1.5rem;
-    margin-top: 13rem;
-    margin-right: 14rem;
-    transform: rotate(-24deg);
+    font-size: 5rem;
+    margin-top: 82.2vh;
   }
 
   h4 {
     font-size: 1.5rem;
   }
 
-  img {
-    display: block;
+  .intro-text {
+    font-size: 1.5rem;
   }
 
-  .feature-divs {
-    display: block;
+  .intro-container {
+    font-size: 20px;
+    margin-top: 500px;
+    margin-bottom: 300px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .intro-text {
+    font-size: 1.5rem;
   }
 
-  .grid {
-    background: #ad7b84;
-    position: relative;
-    max-width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    align-content: flex-start;
+  .intro-container {
+    margin-top: 480px;
+    margin-bottom: 300px;
   }
-  
-  .grid:after {
-    content: '';
-    display: flex;
-    clear: both;
-  } 
-  
-  .grid-item {
-    width: 100%;
-    position: relative;
-    flex: 0 1 auto;
+}
+
+@media only screen and (max-width: 495px) {
+  h1 {
+    font-size: 4rem;
+    margin-top: 83.2vh;
   }
-  
-  .grid-item img {
-    display: flex;
-    width: 98%;
-    padding: 5px 5px;
-    margin-bottom: 1.5rem;
+
+  .intro-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  h1 {
+    color: #ad7b84;
+    font-size: 4rem;
+    margin-top: 28.5rem;
+    margin-right: 0rem;
+    transform: rotate(0deg);
+  }
+
+  .intro-container {
+    font-size: 20px;
+    margin-top: 520px;
+    margin-bottom: 300px;
   }
 }
 
@@ -374,7 +413,7 @@ hr .solid {
   h1 {
     color: #ad7b84;
     font-size: 2.4rem;
-    margin-top: 35.5rem;
+    margin-top: 28.9rem;
     margin-right: 0rem;
     transform: rotate(0deg);
   }
@@ -406,5 +445,38 @@ hr .solid {
   .feature-img {
     width: 280px;
     height: 260px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  h1 {
+    font-size: 2.4rem;
+    margin-top: 27rem;
+    margin-right: 0rem;
+    transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  header {
+    object-fit: cover;
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-top: 23.5rem;
+    margin-right: 0rem;
+    transform: rotate(0deg);
+  }
+
+  .intro-container {
+    font-size: 20px;
+    margin-top: 580px;
+    margin-bottom: 300px;
+  }
+
+  .feature-divs {
+    margin-left: 2px;
   }
 }
