@@ -17,29 +17,28 @@
     <div class="hidden-container">
       <nav class="nav">
         <ul>
-          <li><a href="#" id="composerButton">Famous Composers</a></li>
-          <li><a href="#" id="worksButton">Random Works</a></li>
+          <li><a href="#" id="composerButton" onclick="hideIntro()">Famous Composers</a></li>
+          <li><a href="#" id="worksButton" onclick="hideIntro()">Random Works</a></li>
           <div class="dropdown">
             <li><a href="#" onclick="dropDown()">Search Composer by Period</a></li>
             <div class="dropdown-container">
               <ul>
-                <li><a href="#" class="medieval">Medieval</a></li>
-                <li><a href="#" class="renaissance">Renaissance</a></li>
-                <li><a href="#" class="baroque">Baroque</a></li>
-                <li><a href="#" class="classical">Classical</a></li>
-                <li><a href="#" class="early-romantic">Early Romantic</a></li>
-                <li><a href="#" class="romantic">Romantic</a></li>
-                <li><a href="#" class="late-romantic">Late Romantic</a></li>
-                <li><a href="#" class="twentieth">20th Century</a></li>
-                <li><a href="#" class="post-war">Post-War</a></li>
-                <li><a href="#" class="twenty-first">21st Century</a></li>
+                <li><a href="#" class="medieval" onclick="hideIntro()">Medieval</a></li>
+                <li><a href="#" class="renaissance" onclick="hideIntro()">Renaissance</a></li>
+                <li><a href="#" class="baroque" onclick="hideIntro()">Baroque</a></li>
+                <li><a href="#" class="classical" onclick="hideIntro()">Classical</a></li>
+                <li><a href="#" class="early-romantic" onclick="hideIntro()">Early Romantic</a></li>
+                <li><a href="#" class="romantic" onclick="hideIntro()">Romantic</a></li>
+                <li><a href="#" class="late-romantic" onclick="hideIntro()">Late Romantic</a></li>
+                <li><a href="#" class="twentieth" onclick="hideIntro()">20th Century</a></li>
+                <li><a href="#" class="post-war" onclick="hideIntro()">Post-War</a></li>
+                <li><a href="#" class="twenty-first" onclick="hideIntro()">21st Century</a></li>
               </ul>
             </div>
           </div>
         </ul>
       </nav>
     </div>
-  
     <div class="visible-container">
       <button id="menuButton">
         <i class="fas fa-bars"></i>
@@ -47,46 +46,77 @@
     </div>
     <h1>beethoven & co</h1>
   </header>
+
   <main>
     <div class="intro-container">
       <div class="inner-container">
-      <h2 class="intro-text">Welcome to Beethoven & Company, a warm intro to history's most happenin' classical composers.</h2>
-      <div class="feature-divs">
-        <div class="feature">
-          <img src="https://i.imgur.com/3fSTrlT.gif" alt="woman playing piano" class="feature-img"/>
-          <div class="feature-text">
-            <h3 class="feature-title">Sample a Song</h3>
-            <p>Sample a song from one of these composers. </p>
-        </div>
-        </div>
-        <div class="feature">
-          <img src="https://i.imgur.com/2VjMoIz.gif" alt="dog stealing man's hat" class="feature-img"/>
-          <div class="feature-text">
-            <h3 class="feature-title">Sort By Era</h3>
-            <p>See how the sound and style of changed from period to period.</p>
+        <h2 class="intro-text">This is Beethoven & Company, your soft intro to history's most happenin' classical composers.</h2>
+        <div class="feature-divs">
+          <div class="feature">
+            <img src="https://i.imgur.com/3fSTrlT.gif" alt="woman playing piano" class="feature-img"/>
+            <div class="feature-text">
+              <h3 class="feature-title">Listen In</h3>
+              <p>Sample a song from one of these composers. </p>
           </div>
-        </div>
-        <div class="feature">
-          <img src="https://i.imgur.com/mVbUTIb.gif" alt="cheeky-man" class="feature-img"/>
-          <div class="feature-text">
-            <h3 class="feature-title">Learn More</h3>
-            <p>Check out some cool facts about these musical savants!</p>
+          </div>
+          <div class="feature">
+            <img src="https://i.imgur.com/2VjMoIz.gif" alt="dog stealing man's hat" class="feature-img"/>
+            <div class="feature-text">
+              <h3 class="feature-title">Times a-Changin'</h3>
+              <p>See how the style of music changed from period to period.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <img src="https://i.imgur.com/mVbUTIb.gif" alt="cheeky-man" class="feature-img"/>
+            <div class="feature-text">
+              <h3 class="feature-title">Learn More</h3>
+              <p>Check out some cool facts about these musical savants!</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-    <div class="grid">
-    </div>
+    <div class="grid"></div>
     <a class="top-link hide" href="" id="js-top">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
       <span class="screen-reader-text">Back to top</span>
     </a>
-    </div>
   </main>
   <!-- <footer>
     <hr class="solid">
     <h6><small>MADE FOR MUSIC LOVERS BY A FELLOW MUSIC LOVER. CREDIT TO <a href="https://openopus.org/" id="credit">OPEN OPUS API</a>.</small></h6>
   </footer> -->
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script>
+    window.onSpotifyWebPlaybackSDKReady = () => {
+      const token = 'BQC_kKiw1VoW1U_0em_7634doLkFfWcPNMay4ufuI35D7Wprd8KIr9DEcmqJFzNunQR9I09Vg2_ZnllGa6fR30yU7xEr7UZFPz8yfhMnv8IMIsGk-s_1x0YQ4gYrGX_ChVI-_Qx0V-xrCkOl3wubfVIRPYebTns';
+      const player = new Spotify.Player({
+        name: 'Web Playback SDK Quick Start Player',
+        getOAuthToken: cb => { cb(token); }
+      });
+
+      // Error handling
+      player.addListener('initialization_error', ({ message }) => { console.error(message); });
+      player.addListener('authentication_error', ({ message }) => { console.error(message); });
+      player.addListener('account_error', ({ message }) => { console.error(message); });
+      player.addListener('playback_error', ({ message }) => { console.error(message); });
+
+      // Playback status updates
+      player.addListener('player_state_changed', state => { console.log(state); });
+
+      // Ready
+      player.addListener('ready', ({ device_id }) => {
+        console.log('Ready with Device ID', device_id);
+      });
+
+      // Not Ready
+      player.addListener('not_ready', ({ device_id }) => {
+        console.log('Device ID has gone offline', device_id);
+      });
+
+      // Connect to the player!
+      player.connect();
+    };
+  </script>
 </body>
 </html>

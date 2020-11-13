@@ -22,6 +22,18 @@ const twentyFirst = document.querySelector(".twenty-first");
 // FUNCTIONS LIST
 
 // gets data list of recommended composers
+const grabTopTracks = async () => {
+  const url = "https://api.spotify.com/v1/artists/{id}/top-tracks";
+  try {
+    const response = await axios.get(url);
+    const list = response.data.tracks;
+    postComposers(list);
+  } catch (error) {
+    console.log(`Error: ${error}`);
+  }
+};
+
+// gets data list of recommended composers
 const grabDataByComp = async () => {
   const url = "https://api.openopus.org/composer/list/rec.json";
   try {
@@ -124,8 +136,6 @@ const scrollFunc = () => {
   }
 };
 
-window.addEventListener("scroll", scrollFunc);
-
 const scrollToTop = () => {
   const c = document.documentElement.scrollTop || document.body.scrollTop;
   
@@ -143,12 +153,19 @@ scrollToTopButton.onclick = function(e) {
   scrollToTop();
 }
 
+function hideIntro() {
+  var x = document.querySelector(".intro-container");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 
 // EVENT LISTENERS
 
-window.addEventListener("click", function (e) {
-  document.querySelector(".hidden-container").classList.toggle("hidden-is-open");
-});
+window.addEventListener("scroll", scrollFunc);
 
 composerButton.addEventListener("click", (e) => {
   e.preventDefault();

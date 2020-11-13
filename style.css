@@ -32,6 +32,8 @@ h1 {
   line-height: 1.5rem;
   margin-top: 28.2rem;
   z-index: 2;
+  -webkit-text-stroke: 1px #282828;
+	text-shadow: 0px 4px 4px #282828;
 }
 
 h3 {
@@ -57,7 +59,7 @@ h6 {
   bottom: 0;
   left: -14rem;
   width: 12rem; 
-  background-color: #2f1c49;
+  background-color: #403A5E;
   transition: transform 0.3s ease-out;
   z-index: 3;
 }
@@ -84,6 +86,7 @@ button {
   line-height: 1;
   background-color: #ad7b84;
   border: none;
+  margin-left: -24px;
 }
 
 button:hover,
@@ -117,7 +120,7 @@ button:focus {
 }
 
 .nav a:hover {
-  background-color: #6c1a61;
+  background-color: #725264;
 }
 
 .nav a:hover,
@@ -154,7 +157,7 @@ button:focus {
   display: none;
 }
 
-/* Grid / container for COM created divs items */
+/* Grid container for DOM created div items */
 .grid {
   background: #ad7b84;
   position: relative;
@@ -185,6 +188,44 @@ button:focus {
   padding: 5px 5px;
   margin-bottom: 1.5rem;
   box-shadow: 0 10px 10px -8px;
+  border-radius: 5px;
+}
+
+/* Text on top of paint smear */
+.grid-item .text {
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 74%; 
+  width: 80%; 
+}
+
+/* Paint smear */
+.paint {
+  background: url(https://i.imgur.com/8W3WKiY.png);
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  z-index: 1;
+}
+
+hr .solid {
+  border-top: 3px solid #2a1e4c;
+}
+
+#credit {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* snippet taken from https://codepen.io/andybarefoot/pen/VwZjVma  that increases scale of text and paint smear*/
+
+.text:hover {
+  transform: rotate(0) scale(1.8) translateZ(0);
+  -webkit-filter: drop-shadow(0 20px 20px  rgba(0, 0, 0, 0.70));
+  filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.70));
 }
 
 /* intro container and contents */
@@ -250,6 +291,7 @@ button:focus {
   height: 260px;
   object-fit: cover;
   object-position: 50% 50%;
+  border-radius: 5px;
 }
 
 .feature-text {
@@ -257,45 +299,7 @@ button:focus {
   margin-bottom: 0;
 }
 
-/* Text on top of paint smear */
-.grid-item .text {
-  text-align: center;
-  position: absolute;
-  z-index: 2;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 74%; 
-  width: 80%; 
-}
-
-/* Paint smear */
-.paint {
-  background: url(https://i.imgur.com/8W3WKiY.png);
-  background-repeat: no-repeat;
-  background-size: 100% 80%;
-  z-index: 1;
-}
-
-hr .solid {
-  border-top: 3px solid #2a1e4c;
-}
-
-#credit {
-  text-decoration: none;
-  color: #000000;
-}
-
-/* snippet taken from https://codepen.io/andybarefoot/pen/VwZjVma  that increases scale of text and paint smear*/
-
-.text:hover {
-  transform: rotate(0) scale(1.8) translateZ(0);
-  -webkit-filter: drop-shadow(0 20px 20px  rgba(0, 0, 0, 0.70));
-  filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.70));
-}
-
 /* Media-query for tablet and phone */
-
 @media only screen and (max-width: 600px) {
   body {
     background-color:	#ad7b84;
@@ -363,7 +367,6 @@ hr .solid {
 
 @media only screen and (max-width: 390px) {
   header {
-    background-image: url(https://i.imgur.com/Kt2nuDl.jpg?2);
     object-fit: cover;
     height: 100vh;
   }
@@ -379,6 +382,7 @@ hr .solid {
   .intro-container {
     font-size: 20px;
     margin-top: 520px;
+    margin-bottom: 300px;
   }
 
   .feature-divs {
@@ -402,7 +406,5 @@ hr .solid {
   .feature-img {
     width: 280px;
     height: 260px;
-    object-fit: cover;
-    object-position: 50% 50%;
   }
 }
