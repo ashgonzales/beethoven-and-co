@@ -47,11 +47,9 @@ This informational application allows users search up different classical compos
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
 
-- Find suitable external apis 
+- Find external apis 
 - HTML layout
 - Get data through axios call
 - Create Button for Search by Composer
@@ -138,11 +136,7 @@ function postComposers(composers) {
 
 ## Change Log
  
-8.19.20 Changed API due to inadequate information that could be appended to the DOM. 
-8.19.20 Altered MVP requirement to include two more buttons, an off-canvas menu, and opted for flexbox instead of masonry grid.
-8.20.20 Did not include parallax scroll as it was not intuitive to the design.
-8.20.20 Added image decorations as part of Post-MVP
-8.21.20 Added a replacement API as second one was not working upon deployment (http error)
+11.13.2020 - Added second API (Spotify).
 
 ## Github Page Link
 
