@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script def src="./app.js" defer ></script>
-  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@1&family=Josefin+Sans:wght@500&family=Montserrat:wght@500&family=Permanent+Marker&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./button.css" />
   <title>beethoven&co</title>
 </head>
 <body>
@@ -14,10 +17,10 @@
     <div class="hidden-container">
       <nav class="nav">
         <ul>
-          <li><a href="#" id="composerButton">Recommended Composers</a></li>
+          <li><a href="#" id="composerButton">Famous Composers</a></li>
           <li><a href="#" id="worksButton">Random Works</a></li>
           <div class="dropdown">
-            <li><a href="#" onclick="dropDown()">Search by Period</a></li>
+            <li><a href="#" onclick="dropDown()">Search Composer by Period</a></li>
             <div class="dropdown-container">
               <ul>
                 <li><a href="#" class="medieval">Medieval</a></li>
@@ -39,18 +42,51 @@
   
     <div class="visible-container">
       <button id="menuButton">
-        <img src="https://i.imgur.com/PzOVHrs.png">
+        <i class="fas fa-bars"></i>
       </button>
     </div>
-    <h1>beethoven&co</h1>
+    <h1>beethoven & co</h1>
   </header>
   <main>
+    <div class="intro-container">
+      <div class="inner-container">
+      <h2 class="intro-text">Welcome to Beethoven & Company, a warm intro to history's most happenin' classical composers.</h2>
+      <div class="feature-divs">
+        <div class="feature">
+          <img src="https://i.imgur.com/3fSTrlT.gif" alt="woman playing piano" class="feature-img"/>
+          <div class="feature-text">
+            <h3 class="feature-title">Sample a Song</h3>
+            <p>Sample a song from one of these composers. </p>
+        </div>
+        </div>
+        <div class="feature">
+          <img src="https://i.imgur.com/2VjMoIz.gif" alt="dog stealing man's hat" class="feature-img"/>
+          <div class="feature-text">
+            <h3 class="feature-title">Sort By Era</h3>
+            <p>See how the sound and style of changed from period to period.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <img src="https://i.imgur.com/mVbUTIb.gif" alt="cheeky-man" class="feature-img"/>
+          <div class="feature-text">
+            <h3 class="feature-title">Learn More</h3>
+            <p>Check out some cool facts about these musical savants!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
     <div class="grid">
     </div>
+    <a class="top-link hide" href="" id="js-top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+      <span class="screen-reader-text">Back to top</span>
+    </a>
+    </div>
   </main>
-  <footer>
+  <!-- <footer>
     <hr class="solid">
     <h6><small>MADE FOR MUSIC LOVERS BY A FELLOW MUSIC LOVER. CREDIT TO <a href="https://openopus.org/" id="credit">OPEN OPUS API</a>.</small></h6>
-  </footer>
+  </footer> -->
 </body>
 </html>

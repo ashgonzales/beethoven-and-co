@@ -1,47 +1,42 @@
 html {
   font-size: 125%;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
   line-height: 1.4;
 }
 
 body {
-  background-color: #e8937b;
+  background-color: #ad7b84;
   background-size: cover;
   color: #031129;
-  margin: 1.5rem 1.5rem;
+  padding: 0; 
+  margin: 0;
 }
 
 header {
-  background-image: url(https://i.imgur.com/Kt2nuDl.jpg);
+  background-image: url(https://i.imgur.com/JUHAwkU.jpg);
   background-size: cover;
-  height: 28rem;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   margin-bottom: 1.5rem;
   z-index: 1;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
-  color: #e8937b;
+  font-family: 'Permanent Marker', sans-serif;
+  color: #ad7b84;
   font-size: 4rem;
   line-height: 1.5rem;
-  margin-top: 20.6rem;
-  margin-right: 40px;
+  margin-top: 28.2rem;
   z-index: 2;
 }
 
-/* h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #e8937b;
-  font-size: 2rem;
-  line-height: 1.5rem;
-  margin-top: 2rem; 
-  z-index: 2;
-} */
-
 h3 {
   font-family: 'Permanent Marker', cursive;
-  color: #cc8286;
+  color: #ad7b84;
   transform: rotate(-10deg);
   padding-bottom: 2.2rem;
 }
@@ -56,7 +51,6 @@ h6 {
 }
 
 /* Distinguishing between the two containers */
-
 .hidden-container {
   position: fixed;
   top: 0;
@@ -79,28 +73,31 @@ h6 {
   transition: transform 0.3s ease-out;
 }
 
-/* Menu button and button hover */
-
+/* Menu button and Top button*/
 button {
-  color: inherit;
+  color: #2a1e4c;
   font: inherit;
   letter-spacing: inherit;
   transition: #eeeeee 0.3s ease-out;
   padding: 14px 14px;
   border-radius: 0;
   line-height: 1;
-  background-color: #e8937b;
-  border-color: #031129;
+  background-color: #ad7b84;
+  border: none;
 }
 
 button:hover,
 .hidden-is-open button {
-  border: 2px solid #e8937b;
+  color: #ad7b84;
+  border: 2px solid #ad7b84;
   background-color: transparent;
 }
 
-/* Inside hidden menu */
+button:focus {
+  outline: 0 !important;
+}
 
+/* Inside hidden menu */
 .nav {
   margin-top: 2rem;
 }
@@ -109,7 +106,7 @@ button:hover,
   display: block;
   margin: 0;
   padding: 0.5rem 3rem;
-  color: #faae7b;
+  color: #d4b6ae;
   text-decoration: none;
 }
 
@@ -125,11 +122,10 @@ button:hover,
 
 .nav a:hover,
 .nav a:active {
-  color: #faae7b;
+  color: #d4b6ae;
 }
 
 /* The dropdown button inside menu */
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -154,10 +150,13 @@ button:hover,
   display: block;
 }
 
-/* Grid / container for COM created divs items */
+.hide {
+  display: none;
+}
 
+/* Grid / container for COM created divs items */
 .grid {
-  background: #e8937b;
+  background: #ad7b84;
   position: relative;
   max-width: 100%;
   display: flex;
@@ -174,20 +173,91 @@ button:hover,
 } 
 
 .grid-item {
-  width: 33.333%;
+  width: 30%;
   position: relative;
   flex: 0 1 auto;
 }
 
 .grid-item img {
+  background: #c7a3a9;
   display: flex;
-  width: 98%;
+  width: 95%;
   padding: 5px 5px;
   margin-bottom: 1.5rem;
+  box-shadow: 0 10px 10px -8px;
+}
+
+/* intro container and contents */
+.intro-container {
+  height: 100vh;
+  position: relative;
+}
+
+.inner-container {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.intro-text {
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  padding-top: 80px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.feature-divs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.feature-title {
+  color: #000000;
+  font-weight: 400;
+  text-align: center;
+  transform: rotate(0deg);
+  padding-top: 10px;
+  padding-bottom: 0rem;
+  margin: 0;
+}
+
+.feature {
+  background: #ceafb4;
+  text-align: center;
+  flex: 0 23%;
+  height: 400px;
+  max-width: 250px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 10px 10px -8px;
+  transition: transform .5s ease;
+  border-radius: 5px;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+.feature-img {
+  width: 250px;
+  height: 260px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.feature-text {
+  background: #ceafb4;
+  margin-bottom: 0;
 }
 
 /* Text on top of paint smear */
-
 .grid-item .text {
   text-align: center;
   position: absolute;
@@ -200,7 +270,6 @@ button:hover,
 }
 
 /* Paint smear */
-
 .paint {
   background: url(https://i.imgur.com/8W3WKiY.png);
   background-repeat: no-repeat;
@@ -224,14 +293,22 @@ hr .solid {
   -webkit-filter: drop-shadow(0 20px 20px  rgba(0, 0, 0, 0.70));
   filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.70));
 }
-/* end snippet */
 
 /* Media-query for tablet and phone */
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color:	#2a1e4c;
-    color: #e8937b;
+    background-color:	#ad7b84;
+    color: #000000;
+    margin: 0 auto;
+  }
+
+  header {
+    background-size: cover;
+    height: 26rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    z-index: 1;
   }
 
   h1 {
@@ -249,8 +326,12 @@ hr .solid {
     display: block;
   }
 
+  .feature-divs {
+    display: block;
+  }
+
   .grid {
-    background: #2a1e4c;
+    background: #ad7b84;
     position: relative;
     max-width: 100%;
     display: flex;
@@ -277,5 +358,51 @@ hr .solid {
     width: 98%;
     padding: 5px 5px;
     margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  header {
+    background-image: url(https://i.imgur.com/Kt2nuDl.jpg?2);
+    object-fit: cover;
+    height: 100vh;
+  }
+
+  h1 {
+    color: #ad7b84;
+    font-size: 2.4rem;
+    margin-top: 35.5rem;
+    margin-right: 0rem;
+    transform: rotate(0deg);
+  }
+
+  .intro-container {
+    font-size: 20px;
+    margin-top: 520px;
+  }
+
+  .feature-divs {
+    margin-left: 18px;
+  }
+
+  .feature-title {
+    margin-top: 10px;
+  }
+
+  .feature {
+    background: #ceafb4;
+    text-align: center;
+    height: 400px;
+    max-width: 280px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+
+  .feature-img {
+    width: 280px;
+    height: 260px;
+    object-fit: cover;
+    object-position: 50% 50%;
   }
 }
