@@ -1,7 +1,6 @@
 html {
   font-size: 125%;
   font-family: 'Darker Grotesque', sans-serif;
-  line-height: 1.4;
 }
 
 body {
@@ -21,22 +20,28 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  margin-bottom: 1.5rem;
+  position: relative;
   z-index: 1;
 }
 
 h1 {
-  font-family: 'Pathway Gothic One', sans-serif;
   color: #ad7b84;
+  font-family: 'Pathway Gothic One', sans-serif;
   font-size: 7rem;
-  line-height: 1.5rem;
-  margin-top: 80vh;
+  line-height: 5.5rem;
+  position: absolute;
+  margin-bottom: 0;
+  margin: 0 auto;
+  padding: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 2;
 }
 
 h3 {
-  font-family: 'Permanent Marker', cursive;
   color: #ad7b84;
+  font-family: 'Permanent Marker', cursive;
   transform: rotate(-10deg);
   padding-bottom: 2.2rem;
 }
@@ -218,12 +223,14 @@ hr .solid {
   color: #000000;
 }
 
-/* snippet taken from https://codepen.io/andybarefoot/pen/VwZjVma  that increases scale of text and paint smear*/
-
 .text:hover {
   transform: rotate(0) scale(1.8) translateZ(0);
   -webkit-filter: drop-shadow(0 20px 20px  rgba(0, 0, 0, 0.70));
   filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.70));
+}
+
+.top-link {
+  z-index: 2;
 }
 
 /* intro container and contents */
@@ -297,18 +304,16 @@ hr .solid {
   margin-bottom: 0;
 }
 
-/* Media-query for tablet and phone */
+/* Media-queries for tablet and phone */
 @media only screen and (max-width: 990px) {
   h1 {
     font-size: 7rem;
-    margin-top: 80vh;
   }
 }
 
 @media only screen and (max-width: 930px) {
   h1 {
     font-size: 7rem;
-    margin-top: 80vh;
   }
 
   .intro-container {
@@ -320,7 +325,7 @@ hr .solid {
 @media only screen and (max-width: 690px) {
   h1 {
     font-size: 6rem;
-    margin-top: 82vh;
+    line-height: 4.5rem;
   }
 
   .intro-container {
@@ -348,7 +353,7 @@ hr .solid {
 
   h1 {
     font-size: 5rem;
-    margin-top: 82.2vh;
+    line-height: 3.8rem;
   }
 
   h4 {
@@ -366,21 +371,10 @@ hr .solid {
   }
 }
 
-@media only screen and (max-width: 620px) {
-  .intro-text {
-    font-size: 1.5rem;
-  }
-
-  .intro-container {
-    margin-top: 480px;
-    margin-bottom: 300px;
-  }
-}
-
 @media only screen and (max-width: 495px) {
   h1 {
     font-size: 4rem;
-    margin-top: 83.2vh;
+    line-height: 3.1rem;
   }
 
   .intro-text {
@@ -390,9 +384,8 @@ hr .solid {
 
 @media only screen and (max-width: 411px) {
   h1 {
-    color: #ad7b84;
-    font-size: 4rem;
-    margin-top: 28.5rem;
+    font-size: 3.5rem;
+    line-height: 2.6rem;
     margin-right: 0rem;
     transform: rotate(0deg);
   }
@@ -412,8 +405,8 @@ hr .solid {
 
   h1 {
     color: #ad7b84;
-    font-size: 2.4rem;
-    margin-top: 28.9rem;
+    font-size: 3rem;
+    line-height: 2.2rem;
     margin-right: 0rem;
     transform: rotate(0deg);
   }
@@ -450,8 +443,7 @@ hr .solid {
 
 @media only screen and (max-width: 360px) {
   h1 {
-    font-size: 2.4rem;
-    margin-top: 27rem;
+    font-size: 3rem;
     margin-right: 0rem;
     transform: rotate(0deg);
   }
@@ -464,8 +456,8 @@ hr .solid {
   }
 
   h1 {
-    font-size: 2rem;
-    margin-top: 23.5rem;
+    font-size: 2.5rem;
+    line-height: 1.9rem;
     margin-right: 0rem;
     transform: rotate(0deg);
   }

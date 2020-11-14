@@ -6,6 +6,7 @@ const menubutton = document.querySelector("#menuButton");
 const composerButton = document.querySelector("#composerButton");
 const worksButton = document.querySelector("#worksButton");
 const scrollToTopButton = document.getElementById('js-top');
+const hiddenContainer = document.querySelector(".hidden-container");
 const period = document.querySelector(".period");
 const medieval = document.querySelector(".medieval");
 const renaissance = document.querySelector(".renaissance");
@@ -166,6 +167,12 @@ function hideIntro() {
 // EVENT LISTENERS
 
 window.addEventListener("scroll", scrollFunc);
+
+window.addEventListener("click", (e) => {
+  if (e.target === hiddenContainer) {
+    body.classList.remove('hidden-is-open');
+  }
+});
 
 composerButton.addEventListener("click", (e) => {
   e.preventDefault();

@@ -17,22 +17,22 @@
     <div class="hidden-container">
       <nav class="nav">
         <ul>
-          <li><a href="#" id="composerButton" onclick="hideIntro()">Famous Composers</a></li>
-          <li><a href="#" id="worksButton" onclick="hideIntro()">Random Works</a></li>
+          <li><a href="#grid" id="composerButton" onclick="hideIntro()">Famous Composers</a></li>
+          <li><a href="#grid" id="worksButton" onclick="hideIntro()">Random Works</a></li>
           <div class="dropdown">
-            <li><a href="#" onclick="dropDown()">Search Composer by Period</a></li>
+            <li><a href="#grid" onclick="dropDown()">Search Composer by Period</a></li>
             <div class="dropdown-container">
               <ul>
-                <li><a href="#" class="medieval" onclick="hideIntro()">Medieval</a></li>
-                <li><a href="#" class="renaissance" onclick="hideIntro()">Renaissance</a></li>
-                <li><a href="#" class="baroque" onclick="hideIntro()">Baroque</a></li>
-                <li><a href="#" class="classical" onclick="hideIntro()">Classical</a></li>
-                <li><a href="#" class="early-romantic" onclick="hideIntro()">Early Romantic</a></li>
-                <li><a href="#" class="romantic" onclick="hideIntro()">Romantic</a></li>
-                <li><a href="#" class="late-romantic" onclick="hideIntro()">Late Romantic</a></li>
-                <li><a href="#" class="twentieth" onclick="hideIntro()">20th Century</a></li>
-                <li><a href="#" class="post-war" onclick="hideIntro()">Post-War</a></li>
-                <li><a href="#" class="twenty-first" onclick="hideIntro()">21st Century</a></li>
+                <li><a href="#grid" class="medieval" onclick="hideIntro()">Medieval</a></li>
+                <li><a href="#grid" class="renaissance" onclick="hideIntro()">Renaissance</a></li>
+                <li><a href="#grid" class="baroque" onclick="hideIntro()">Baroque</a></li>
+                <li><a href="#grid" class="classical" onclick="hideIntro()">Classical</a></li>
+                <li><a href="#grid" class="early-romantic" onclick="hideIntro()">Early Romantic</a></li>
+                <li><a href="#grid" class="romantic" onclick="hideIntro()">Romantic</a></li>
+                <li><a href="#grid" class="late-romantic" onclick="hideIntro()">Late Romantic</a></li>
+                <li><a href="#grid" class="twentieth" onclick="hideIntro()">20th Century</a></li>
+                <li><a href="#grid" class="post-war" onclick="hideIntro()">Post-War</a></li>
+                <li><a href="#grid" class="twenty-first" onclick="hideIntro()">21st Century</a></li>
               </ul>
             </div>
           </div>
@@ -76,7 +76,7 @@
         </div>
       </div>
     </div>
-    <div class="grid"></div>
+    <div class="grid" id="grid"></div>
     <a class="top-link hide" href="" id="js-top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
       <span class="screen-reader-text">Back to top</span>
@@ -86,37 +86,5 @@
     <hr class="solid">
     <h6><small>MADE FOR MUSIC LOVERS BY A FELLOW MUSIC LOVER. CREDIT TO <a href="https://openopus.org/" id="credit">OPEN OPUS API</a>.</small></h6>
   </footer> -->
-  <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script>
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      const token = 'BQC_kKiw1VoW1U_0em_7634doLkFfWcPNMay4ufuI35D7Wprd8KIr9DEcmqJFzNunQR9I09Vg2_ZnllGa6fR30yU7xEr7UZFPz8yfhMnv8IMIsGk-s_1x0YQ4gYrGX_ChVI-_Qx0V-xrCkOl3wubfVIRPYebTns';
-      const player = new Spotify.Player({
-        name: 'Web Playback SDK Quick Start Player',
-        getOAuthToken: cb => { cb(token); }
-      });
-
-      // Error handling
-      player.addListener('initialization_error', ({ message }) => { console.error(message); });
-      player.addListener('authentication_error', ({ message }) => { console.error(message); });
-      player.addListener('account_error', ({ message }) => { console.error(message); });
-      player.addListener('playback_error', ({ message }) => { console.error(message); });
-
-      // Playback status updates
-      player.addListener('player_state_changed', state => { console.log(state); });
-
-      // Ready
-      player.addListener('ready', ({ device_id }) => {
-        console.log('Ready with Device ID', device_id);
-      });
-
-      // Not Ready
-      player.addListener('not_ready', ({ device_id }) => {
-        console.log('Device ID has gone offline', device_id);
-      });
-
-      // Connect to the player!
-      player.connect();
-    };
-  </script>
 </body>
 </html>
