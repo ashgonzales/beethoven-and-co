@@ -17,22 +17,22 @@
     <div class="hidden-container">
       <nav class="nav">
         <ul>
-          <li><a href="#grid" id="composerButton" onclick="hideIntro()">Famous Composers</a></li>
-          <li><a href="#grid" id="worksButton" onclick="hideIntro()">Random Works</a></li>
+          <li><a href="#data" id="composerButton" onclick="hideIntro()">Famous Composers</a></li>
+          <li><a href="#data" id="worksButton" onclick="hideIntro()">Random Works</a></li>
           <div class="dropdown">
-            <li><a href="#grid" onclick="dropDown()">Search Composer by Period</a></li>
+            <li><a href="#" onclick="dropDown()">Search Composer by Period</a></li>
             <div class="dropdown-container">
               <ul>
-                <li><a href="#grid" class="medieval" onclick="hideIntro()">Medieval</a></li>
-                <li><a href="#grid" class="renaissance" onclick="hideIntro()">Renaissance</a></li>
-                <li><a href="#grid" class="baroque" onclick="hideIntro()">Baroque</a></li>
-                <li><a href="#grid" class="classical" onclick="hideIntro()">Classical</a></li>
-                <li><a href="#grid" class="early-romantic" onclick="hideIntro()">Early Romantic</a></li>
-                <li><a href="#grid" class="romantic" onclick="hideIntro()">Romantic</a></li>
-                <li><a href="#grid" class="late-romantic" onclick="hideIntro()">Late Romantic</a></li>
-                <li><a href="#grid" class="twentieth" onclick="hideIntro()">20th Century</a></li>
-                <li><a href="#grid" class="post-war" onclick="hideIntro()">Post-War</a></li>
-                <li><a href="#grid" class="twenty-first" onclick="hideIntro()">21st Century</a></li>
+                <li><a href="#data" class="medieval" onclick="hideIntro()">Medieval</a></li>
+                <li><a href="#data" class="renaissance" onclick="hideIntro()">Renaissance</a></li>
+                <li><a href="#data" class="baroque" onclick="hideIntro()">Baroque</a></li>
+                <li><a href="#data" class="classical" onclick="hideIntro()">Classical</a></li>
+                <li><a href="#data" class="early-romantic" onclick="hideIntro()">Early Romantic</a></li>
+                <li><a href="#data" class="romantic" onclick="hideIntro()">Romantic</a></li>
+                <li><a href="#data" class="late-romantic" onclick="hideIntro()">Late Romantic</a></li>
+                <li><a href="#data" class="twentieth" onclick="hideIntro()">20th Century</a></li>
+                <li><a href="#data" class="post-war" onclick="hideIntro()">Post-War</a></li>
+                <li><a href="#data" class="twenty-first" onclick="hideIntro()">21st Century</a></li>
               </ul>
             </div>
           </div>
@@ -47,7 +47,7 @@
     <h1>BEETHOVEN & CO</h1>
   </header>
 
-  <main>
+  <main id="data">
     <div class="intro-container">
       <div class="inner-container">
         <h2 class="intro-text">This is Beethoven & Company, your soft intro to history's most happenin' classical composers.</h2>
@@ -76,7 +76,7 @@
         </div>
       </div>
     </div>
-    <div class="grid" id="grid"></div>
+    <div class="grid"></div>
     <a class="top-link hide" href="" id="js-top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
       <span class="screen-reader-text">Back to top</span>

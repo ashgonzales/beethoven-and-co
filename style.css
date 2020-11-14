@@ -21,7 +21,7 @@ header {
   background-size: cover;
   text-align: center;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 h1 {
@@ -36,7 +36,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: -2;
 }
 
 h3 {
@@ -57,6 +57,7 @@ h6 {
 
 /* Distinguishing between the two containers */
 .hidden-container {
+  text-align: left;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -64,7 +65,7 @@ h6 {
   width: 12rem; 
   background-color: #403A5E;
   transition: transform 0.3s ease-out;
-  z-index: 3;
+  z-index: -1;
 }
 
 .hidden-is-open .visible-container,
@@ -111,7 +112,7 @@ button:focus {
 .nav a {
   display: block;
   margin: 0;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 0.5rem;
   color: #d4b6ae;
   text-decoration: none;
 }
@@ -140,8 +141,8 @@ button:focus {
 .dropdown-container {
   display: none;
   position: absolute;
-  background-color: #744867;
-  min-width: 11.8rem;
+  background-color: #403A5E;
+  min-width: 12rem;
   z-index: 1;
 }
 
@@ -170,6 +171,7 @@ button:focus {
   justify-content: space-evenly;
   align-items: flex-start;
   align-content: flex-start;
+  margin-top: 20px;
 }
 
 .grid:after {
@@ -191,14 +193,14 @@ button:focus {
   padding: 5px 5px;
   margin-bottom: 1.5rem;
   box-shadow: 0 10px 10px -8px;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 /* Text on top of paint smear */
 .grid-item .text {
   text-align: center;
   position: absolute;
-  z-index: 2;
+  z-index: 0;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -211,7 +213,7 @@ button:focus {
   background: url(https://i.imgur.com/8W3WKiY.png);
   background-repeat: no-repeat;
   background-size: 100% 80%;
-  z-index: 1;
+  z-index: 0;
 }
 
 hr .solid {
@@ -275,7 +277,8 @@ hr .solid {
 }
 
 .feature {
-  background: #ceafb4;
+  background: rgb(64,58,94);
+  background: linear-gradient(152deg, rgba(64,58,94,1) 20%, rgba(110,78,97,1) 89%);
   text-align: center;
   flex: 0 23%;
   height: 400px;
@@ -300,7 +303,7 @@ hr .solid {
 }
 
 .feature-text {
-  background: #ceafb4;
+  background: transparent;
   margin-bottom: 0;
 }
 

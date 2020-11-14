@@ -142,8 +142,6 @@ const scrollToTop = () => {
   
   if (c > 0) {
     window.requestAnimationFrame(scrollToTop);
-    // ScrollTo takes an x and a y coordinate.
-    // Increase the '10' value to get a smoother/slower scroll!
     window.scrollTo(0, c - c / 10);
   }
 };
@@ -159,7 +157,7 @@ function hideIntro() {
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
-    x.style.display = "none";
+    x.classList.add("hide");
   }
 }
 
@@ -170,8 +168,12 @@ window.addEventListener("scroll", scrollFunc);
 
 window.addEventListener("click", (e) => {
   if (e.target === hiddenContainer) {
-    body.classList.remove('hidden-is-open');
+    body.classList.remove("hidden-is-open");
   }
+});
+
+window.addEventListener("scroll", (e) => {
+    body.classList.remove("hidden-is-open");
 });
 
 composerButton.addEventListener("click", (e) => {
